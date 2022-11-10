@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>มิตรรักนักสุ่ม</title>
+    <style>
+        body{
+            background-color: #d0e9d4;
+        }
+
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+        }
+
+        .floor{
+          
+            width:100%;
+ 
+          
+        }
+        .city{
+           
+            width:100%;
+
+
+        }
+        .electric{
+
+            width:100%;
+
+        }
+        .cloud{
+            
+            width:100%;
+
+        }
+        main{
+            width: 100%;
+            overflow: hidden;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        
+        <div style="width:500%; height:100%; position:relative">
+            <div style="position:absolute; transform: translateX(0px);" id="divcha">
+                <img src="./PNG update/Map1(ยาย)/ตัวละคร/ตัวเอก.gif" style="width:500%; height: 500%;">
+            </div>
+            <img src="./PNG update/Map1(ยาย)/ฉาก/ฉาก(แก้)/รวมฉาก/bg1.png" class="floor"> 
+            
+        </div>
+            
+       
+    
+        
+    </main>
+    <script>
+        //แก้การ scroll ให้ไปทางข้าง
+  
+        const scrollContainer = document.querySelector("main");
+        var x = 0;
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+
+            scrollContainer.scrollLeft += evt.deltaY;
+            console.log(scrollContainer.scrollLeft);
+            x = parseInt(scrollContainer.scrollLeft);
+            
+            document.getElementById("divcha").style.transform ="translateX(x*1px)";
+            
+            
+}
+)
+
+
+
+    </script>
+</body>
+</html>

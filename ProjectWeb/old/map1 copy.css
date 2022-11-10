@@ -1,0 +1,197 @@
+
+        body{
+            background-color: #d0e9d4;
+            overflow: hidden;
+            font-family: myfont;
+            font-size:2vw;;
+        }
+
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+        }
+
+        .floor{
+            position:absolute;
+            width:100%;
+            transform: translateY(41.5vw);
+        }
+        .city{
+            position:absolute;
+            width:100%;
+            transform: translateY(28vw);
+        }
+        .electric{
+            position:absolute;
+            width:100%;
+            transform: translateY(30vw);
+        }
+        .cloud{
+            position:absolute;
+            width:100%;
+            transform: translateY(20vw);
+        }
+        main{
+            overflow: hidden;
+            width: 100%;
+            height: 1000px;
+        }
+        .cha{
+            position: relative;
+            width:5.5%; 
+            height:2%; 
+            --x: 0;
+            --moveset:0;
+            z-index: 10;
+            /*transform: translateY(675%) translateX(var(--x));*/
+            transform: translateY(36.4vw) translateX(var(--moveset));
+  
+    
+
+        }
+        .yai{
+            position: absolute;
+            width:1.4%; 
+            z-index: 9;
+            transform: translateY(640%) translateX(39.4vw);
+        }
+        .ma_ngan{
+            position: absolute;
+            width:6%; 
+    
+            transform: translateY(28.7vw) translateX(41.5vw);
+        }
+        .tv{
+            position: absolute;
+            width:4.2%; 
+            
+            transform: translateY(30vw) translateX(114vw);
+        }
+
+        .phone{
+            position: absolute;
+            width:1.4%; 
+            
+            transform: translateY(278%) translateX(4000%);
+        }
+
+        .shrine{
+            position: absolute;
+            width:1.4%; 
+            
+            transform: translateY(323%) translateX(4300%);
+        }
+
+        .guay{
+            position: absolute;
+            width:5%; 
+            
+            transform: translateY(425%) translateX(1485%);
+        }
+
+        .women_map1{
+            position: absolute;
+            width:1.8%; 
+            z-index: 9;
+            transform: translateY(36.4vw) translateX(108vw);
+        }
+
+        .cat{
+            position: absolute;
+            width:1.2%; 
+            z-index: 9;
+            transform: translateY(1516%) translateX(4850%);
+        }
+
+
+        .map1{
+            width:300vw; 
+            height:auto; 
+            position:relative;
+            --map1move:0;
+            transform: translateX(var(--map1move));
+            
+        }
+        /*@media only screen and (max-width: 480px) {
+            main{
+            overflow: hidden;
+            width: 200%;
+            height: 900px;
+        }
+        }*/
+
+        @font-face {
+            font-family: myfont;
+            src: url(font/PSLCD3310.ttf);
+        }
+
+.chat1{
+            position: absolute;
+            width:100%; 
+            
+            
+        }
+        .tv2{
+            position: absolute;
+            width:100%; 
+            
+            
+        }
+
+        .dialog{
+            position: absolute;
+            display: none;
+            width:10%; 
+            height: 100%;
+            transform: translateX(55%);
+            padding-top: 4%;
+            opacity: 100%;
+        }
+        .chat1[data-flip = '-1']{
+            transform: scaleX(-1);
+
+        }
+        .dialog[data-flip = '-1']{
+            transform: translateX(110%);
+
+
+        }
+        .pang_huay{
+            padding-top: 3%;
+            opacity: 100%;
+            position: absolute;
+            width:10%; 
+            height: 100%;
+            transform: translateX(130%);
+            display: none;
+            z-index: 11;
+        }
+        .huay{
+            position: absolute;
+            width:25%; 
+        }
+
+        .tv_huay{
+    
+            padding-top: 1%;
+            position: absolute;
+            width:50%; 
+            height: 100%;
+            transform: translateX(50%);
+            display: none;
+            z-index: 12;
+        }
+        
+
+        audio::-webkit-media-controls-timeline,
+        video::-webkit-media-controls-timeline {
+            display: none;
+        }
+        audio::-webkit-media-controls,
+        video::-webkit-media-controls {
+            display: none;
+        }

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="map4.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <title>มิตรรักนักสุ่ม</title>
+
+</head>
+<body>
+
+     
+
+    <main id="main">
+        
+        <div class="check" id="check">
+            
+        </div>
+        <div class="map4" id="map4">
+
+            <div class="c1" id="c1" style="position: absolute; width:100%;">
+                <img src="./PNG update/Map1/character/main_cha.gif" class="cha" id="cha">
+            </div>
+            <img class="floor" src="./PNG update/Map4/scene/floor.PNG" alt="">
+            <img class="stage" src="./PNG update/Map4/scene/vetee.PNG" alt="">
+            <img class="stage2" src="./PNG update/Map4/scene/vetee.PNG" alt="">
+
+            <img class="door" src="./PNG update/Map4/edit/IMG_5536_new.png" alt="">
+            <img class="elmo" onclick="elmoZoom()" src="./PNG update/Map4/edit/IMG_0542_new.png" alt="">
+            <img class="door2" style="left: 256.5vw;" src="./PNG update/Map4/edit/IMG_5536_new.png" alt="">
+
+            
+            
+            <img class="cat" src="./PNG update/character/cat.gif" alt="" class="cat">
+            <img class="women1" src="./PNG update/character/Employee5.gif" alt="" >
+            <img class="women2" src="./PNG update/character/Employee4.gif" alt="" >
+            <img class="women3" src="./PNG update/character/Employee3.gif" alt="" >
+
+   
+
+
+
+            <div class="lottery1" onclick="lottoPopup()" style="left:36vw;">
+                <img class="lottery_1" src="./PNG update/Map4/edit/lot1.png" alt="">
+            </div>
+
+            <div class="lottery1" onclick="lottoPopup()" style="left: 46vw;">
+                <img class="lottery_1" src="./PNG update/Map4/edit/lot1.png" alt="">
+            </div>
+
+            <div class="lottery1" onclick="lottoPopup()" style="left: 56vw;">
+                <img class="lottery_1" src="./PNG update/Map4/edit/lot1.png" alt="">
+            </div>
+
+            <div class="lottery1" onclick="lottoPopup()" style="left: 66vw;">
+                <img class="lottery_1" src="./PNG update/Map4/edit/lot1.png" alt="">
+            </div>
+
+            <div class="lottery1" onclick="lottoPopup()" style="left: 76vw;">
+                <img class="lottery_1" src="./PNG update/Map4/edit/lot1.png" alt="">
+            </div>
+
+            <div class="lottery1" onclick="lottoPopup()" style="left: 86vw;">
+                <img class="lottery_1" src="./PNG update/Map4/edit/lot1.png" alt="">
+            </div>
+
+
+
+            <img class="lottery_2" onclick="lottoPopup2()" src="./PNG update/Map4/edit/lot2.png" alt="">
+        
+            <img class="lottery_3" onclick="lottoPopup3()" style="left:176vw;" src="./PNG update/character/lottery.gif" alt="">
+            <img class="lottery_3" onclick="lottoPopup3()" style="left:186vw;" src="./PNG update/character/lottery2.gif" alt="">
+            <img class="lottery_3" onclick="lottoPopup3()" style="left:196vw;" src="./PNG update/character/lottery.gif" alt="">
+            <img class="lottery_3" onclick="lottoPopup3()" style="left:206vw;" src="./PNG update/character/lottery2.gif" alt="">
+            <img class="lottery_3" onclick="lottoPopup3()" style="left:216vw;" src="./PNG update/character/lottery.gif" alt="">
+            <img class="lottery_3" onclick="lottoPopup3()" style="left:226vw;" src="./PNG update/character/lottery2.gif" alt="">
+
+        </div>
+
+        <div class="popup_wrap" id="p1">
+            <img class="popup_lottery 1" id="pl1">
+            <div onclick="closePopup()" class="close_button">
+                <img class="closebutton_img" src="./PNG update/Pop up _ effect/Pop up_x.png">
+            </div>
+        </div>
+
+        <div class="popup_wrap" id="p2">
+            <img class="popup_lottery 2" id="pl2">
+            <div onclick="closePopup()" class="close_button">
+                <img class="closebutton_img" src="./PNG update/Pop up _ effect/Pop up_x.png">
+            </div>
+            <div onclick="nextPopup()" class="next_button" id="nextbutton1">
+                <img class="nextbutton_img" src="./PNG update/Pop up _ effect/play.png">
+            </div>
+        </div>
+        
+        <div class="popup_wrap" id="p3">
+            <img class="popup_lottery 3" id="pl3">
+            <div onclick="closePopup()" class="close_button">
+                <img class="closebutton_img" src="./PNG update/Pop up _ effect/Pop up_x.png">
+            </div>
+            <div onclick="nextPopup2()" class="next_button" id="nextbutton2">
+                <img class="nextbutton_img" src="./PNG update/Pop up _ effect/play.png">
+            </div>
+            <img class="popup_lotto" src="./PNG update/character/lottery2.gif" alt="">
+        </div>
+
+    </main>
+  
+
+
+
+<script src="map4.js"></script>
+
+    <!--<script>
+        let app = new Vue({
+            el:'.dialog',
+            data:{
+                mes:["เอ้าว่าไงไอ้หนุ่ม สนใจมาวัดดวงกับป้ามั้ย อีกไม่กี่ใบก็หมดแล้วรับรองรวย ไม่ต้องทำงานงกๆหน้าคอมไปอีกนาน อีกไม่กี่นาทีก็จะประกาศผลแล้วเด้อ"
+                ,"เอ่อ...ก็ได้ครับ"
+                , "ขอให้โชคดีนะพ่อหนุ่ม" ],
+                talker: 0
+            },
+            methods:{
+                talk: function(){
+                    this.talker = (this.talker+1)
+                    if (this.talker ==1){
+                        document.querySelector('.dialog').dataset.flip = -1
+                        document.querySelector('.chat1').dataset.flip = -1
+                    }
+                    else if(this.talker == 0 || this.talker == 2){
+                        document.querySelector('.dialog').dataset.flip = 1
+                        document.querySelector('.chat1').dataset.flip = 1
+                    }
+                    else{
+                        document.querySelector('.dialog').style.display = "none"
+                    }
+                }
+            }
+        })
+    </script>-->
+
+    <script src="plzrotate.js"></script>
+</body>
+</html>

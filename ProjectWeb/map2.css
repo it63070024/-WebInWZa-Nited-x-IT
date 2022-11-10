@@ -1,0 +1,235 @@
+
+        body{
+            background-color: #d0e9d4;
+            overflow: hidden;
+            font-family: myfont;
+            font-size:2vw;;
+        }
+
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .floor{
+            position:absolute;
+            width:100%;
+            top: 11.4vw;
+            /* transform: translateY(11.4vw); */
+        }
+        .city{
+            position:absolute;
+            width:100%;
+            top: 11.4vw;
+            /* transform: translateY(11.4vw); */
+        }
+
+        .cloud{
+            position:absolute;
+            width:100%;
+            top: 14vw;
+            /* transform: translateY(14vw); */
+        }
+        main{
+            overflow: hidden;
+            width: 100%;
+            height: 1000px;
+        }
+        .cha{
+            position: relative;
+            width:5.5%; 
+            --x: 0;
+            --moveset:0;
+            z-index: 10;
+            /*transform: translateY(675%) translateX(var(--x));*/
+            transform: translateY(662%) translateX(var(--moveset));
+        }
+        .chinese1{
+            position: absolute;
+            width: 1.1%;
+            left: 33vw;
+            top: 36.65vw;
+            /* transform: translateY(36.65vw) translateX(33vw);  */
+        }
+        .chinese2{
+            position: absolute;
+            width: 1.5%;
+            left: 40.8vw;
+            top: 36.7vw;
+            /* transform: translateY(36.7vw) translateX(40.8vw);  */
+        }
+
+        .women2{
+            position: absolute;
+            width: 1.6%;
+            left: 81.6vw;
+            top: 37vw;
+            /* transform: translateY(37vw) translateX(81.6vw);  */
+        }
+
+        .phanghai1{
+            position: absolute;
+            width: 1.6%;
+            left: 125.5vw;
+            top: 35.5vw;
+            /* transform: translateY(35.5vw) translateX(125.5vw);  */
+        }
+
+        .phanghai2{
+            position: absolute;
+            width: 1.9%;
+            left: 135.5vw;
+            top: 36.65vw;
+            /* transform: translateY(36.65vw) translateX(135.5vw);  */
+        }
+
+        .map1{
+            width:300vw; 
+            height:auto; 
+            position:relative;
+            --map2move:0;
+            transform: translateX(var(--map2move));
+            
+        }
+     
+        .sala1{
+            position: absolute;
+            width: 6%;
+            left: 29.45vw;
+            top: 22.35vw;
+            /* transform: translateY(22.35vw) translateX(29.45vw); */
+        }
+
+        .bamboo{
+            position: absolute;
+            width: 2.7%;
+            left: 85.45vw;
+            top: 32vw;
+            /* transform: translateY(32vw) translateX(85.45vw);  */
+        }
+
+        .bg_bamboo{
+            position: absolute;
+            width: 10%;
+            left: 74.85vw;
+            top: 29.2vw;
+            /* transform: translateY(29.2vw) translateX(74.85vw);  */
+        }
+
+        .sala2{
+            position: absolute;
+            width: 6%;
+            left: 81vw;
+            top: 23vw;
+            /* transform: translateY(23vw) translateX(81vw); */
+        }
+
+        .clay{
+            position: absolute;
+            width: 8%;
+            left: 120vw;
+            top: 39.9vw;
+            /* transform: translateY(39.9vw) translateX(120vw);  */
+        }
+
+        .stand{
+            position: absolute;
+            width: 3%;
+            left: 167vw;
+            top: 38.8vw;
+            /* transform: translateY(38.8vw) translateX(167vw);  */
+        }
+
+        .chinese_hong{
+            position: absolute;
+            width: 1.9%;
+            left: 170vw;
+            top: 33.7vw;
+            /* transform: translateY(33.7vw) translateX(170vw);  */
+        }
+
+        .lottery{
+            position: absolute;
+            width: 7%;
+            left: 178.5vw;
+            top: 23.1vw;
+            /* transform: translateY(23.1vw) translateX(178.5vw); */
+        }
+
+        .thai1{
+            position: absolute;
+            width: 1.9%;
+            left: 180.2vw;
+            top: 35.65vw;
+            /* transform: translateY(35.65vw) translateX(180.2vw);  */
+        }
+
+        .thai2{
+            position: absolute;
+            width: 1.9%;
+            left: 193.2vw;
+            top: 35.65vw;
+            /* transform: translateY(35.65vw) translateX(193.2vw);  */
+        }
+
+        .sala3{
+            position: absolute;
+            width: 6%;
+            left: 225vw;
+            top: 22vw;
+            /* transform: translateY(22vw) translateX(225vw); */
+        }
+
+        .women3{
+            position: absolute;
+            width: 1.6%;
+            left: 224vw;
+            top: 37vw;
+            /* transform: translateY(37vw) translateX(224vw);  */
+        }
+        
+        .hai1{
+            position: absolute;
+            width: 1.2%;
+            left: 126vw;
+            top: 43vw;
+            transform:rotate(50deg);
+            /* transform: translateY(43vw) translateX(126vw) rotate(50deg);  */
+        }
+
+        .hai2{
+            position: absolute;
+            width: 1.4%;
+            left: 136.5vw;
+            top: 44vw;
+            transform:rotate(-5deg);
+            /* transform: translateY(44vw) translateX(136.5vw) rotate(-5deg);  */
+        }
+
+        .hai3{
+            position: absolute;
+            width: 1.4%;
+            left: 144.6vw;
+            top: 41.5vw;
+            /* transform: translateY(41.5vw) translateX(144.6vw);  */
+        }
+        .ong{
+            position: absolute;
+            width: 3%;
+            left: 229.5vw;
+            top: 33.9vw;
+        }
+        @font-face {
+            font-family: myfont;
+            src: url(font/PSLCD3310.ttf);
+        }
+

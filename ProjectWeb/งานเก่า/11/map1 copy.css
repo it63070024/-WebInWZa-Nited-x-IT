@@ -1,0 +1,287 @@
+:root{
+    /* --border_val:2px; */
+}
+body{
+    border: var(--border_val) solid black;
+}
+body>*{
+    border: var(--border_val) solid purple;
+}
+body>*>*{
+    border: var(--border_val) solid blue;
+}
+body>*>*>*{
+    border: var(--border_val) solid green;
+}
+body>*>*>*>*{
+    border: var(--border_val) solid yellow;
+}
+           
+           @keyframes example {
+            0%   {transform: translateY(662%) translateX(var(--moveset));}
+            100% {transform: translateY(700%) translateX(var(--moveset));}
+          }
+
+        body{
+            background-color: #d0e9d4;
+            overflow: hidden;
+            font-family: myfont;
+            font-size:2vw;;
+        }
+
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+            
+        }
+
+        .floor{
+            position:absolute;
+            width:100%;
+            top:41.55vw;
+        }
+        .city{
+            position:absolute;
+            width:100%;
+            top:27.7vw;
+        }
+        .electric{
+            position:absolute;
+            width:100%;
+            top:30.2vw;
+        }
+        .cloud{
+            position:absolute;
+            width:100%;
+            top:10vw;
+        }
+        main{
+            overflow: hidden;
+            width: 100%;
+            height: 200vh;
+        }
+        .cha{
+            position: relative;
+            width:5.5%; 
+            height:2%;
+            z-index: 10;
+            --moveset:0;
+            /*transform: translateY(675%) translateX(var(--x));*/
+            top:36.4vw;
+            left:var(--moveset);
+            
+        }
+        .c1{
+            
+            position: absolute; 
+            width:100%;
+
+        }
+        .yai{
+            position: absolute;
+            width:1.4%; 
+            z-index: 9;
+            top: 36.4vw;
+            left: 39vw;
+            
+        }
+        .ma_ngan{
+            position: absolute;
+            width:6%; 
+    
+             top:28.75vw; left:41.5vw;
+        }
+        .tv{
+            position: absolute;
+            width:4.2%; 
+            
+             top:29.9vw; left:113.5vw;
+        }
+
+        .phone{
+            position: absolute;
+            width:1.4%; 
+            
+             top:31.1vw; left:168vw;
+        }
+
+        .shrine{
+            position: absolute;
+            width:1.4%; 
+            
+             top:31.8vw; left:180.5vw;
+        }
+
+        .guay{
+            position: absolute;
+            width:5%; 
+            
+             top:36.1vw; left:222.7vw;
+        }
+
+        .women_map1{
+            position: absolute;
+            width:1.8%; 
+            z-index: 9;
+             top:36.5vw; left:108vw;
+        }
+
+        .cat{
+            position: absolute;
+            width:1.2%; 
+            z-index: 9;
+             top:39vw; left:174.5vw;
+        }
+
+
+        
+        .map1{
+            width:300vw; 
+            height:auto; 
+            position:relative;
+            --map1move:0;
+            left:var(--map1move);
+            
+        }
+
+        @font-face {
+            font-family: myfont;
+            src: url(font/PSLCD3310.ttf);
+        }
+
+        .chat1{
+            position: absolute;
+            width:100%; 
+                    
+            
+        }
+        .tv2{
+            position: absolute;
+            width:100%; 
+            
+            
+        }
+
+        .dialog{
+            position: absolute;
+            display: none;
+            width:10%; 
+            height: 100%;
+             left:16vw;
+            padding-top: 4%;
+            opacity: 100%;
+        }
+
+        .dialog:hover{
+            cursor:pointer;
+        }
+
+        .chat1[data-flip = '-1']{
+            transform: scaleX(-1);
+            width: 50%;
+
+        }
+        .dialog[data-flip = '-1']{
+            top:12vw; left:35vw;
+
+
+        }
+
+        .chat1[data-flip = '2']{
+            width: 70%;
+            height: 80%;
+
+        }
+        .dialog[data-flip = '2']{
+            top:14vw; left:23vw;
+
+
+        }
+        .pang_huay{
+            padding-top: 3%;
+            opacity: 100%;
+            position: absolute;
+            width:10%; 
+            height: 100%;
+             left:39vw;
+            display: none;
+            z-index: 11;
+        }
+        .huay{
+            position: absolute;
+            width:25%; 
+        }
+        
+
+        .tv_huay{
+    
+            padding-top: 1%;
+            position: absolute;
+            width:50%; 
+            height: 100%;
+             left:25vw;
+            display: none;
+            z-index: 12;
+        }
+
+        .next{
+            position: absolute;
+            z-index: 10;
+            width: 10%;
+             top:25vw; left:25vw;
+        }
+
+        .next[data-flip = '-1']{
+            position: absolute;
+            z-index: 10;
+            width: 8%;
+             top:17vw; left:11vw;
+        }
+
+        .next[data-flip = '2']{
+            position: absolute;
+            z-index: 10;
+            width: 8%;
+             top:16vw; left:17vw;
+        }
+        
+
+        audio::-webkit-media-controls-timeline,
+        video::-webkit-media-controls-timeline {
+            display: none;
+        }
+        audio::-webkit-media-controls,
+        video::-webkit-media-controls {
+            display: none;
+        }
+        .check{
+           
+            border-style: solid;
+
+            position: absolute;
+            top: 36.5vw;
+            left: 97vw;
+            z-index: 20;
+        }
+
+        .collision{
+            --moveset:0;
+            border-style: solid;
+            position: absolute;
+            top: 36.5vw;
+            z-index: 20;
+            left:var(--moveset);
+        }
+        
+
+.movement{
+    animation: move .8s steps(2) infinite;
+}
+@keyframes move {
+    from{top:2px;}
+    to{top:0px;}
+}

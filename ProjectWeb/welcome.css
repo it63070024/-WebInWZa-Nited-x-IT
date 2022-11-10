@@ -1,0 +1,60 @@
+
+        body{
+            background-color: #b38255;
+            overflow: hidden;
+            font-family: myfont;
+            font-size:2vw;;
+        }
+
+        @font-face {
+            font-family: myfont;
+            src: url(font/PSLCD3310.ttf);
+        }
+
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+        }
+
+        .floor{
+            position:absolute;
+            width:71vw;
+            transform: translateX(15vw);
+
+        }
+       
+        .lottery{
+            position:absolute;
+            width:10vw;
+            transform: translateY(30vw) translateX(33vw);
+
+        }
+
+        .lottery2{
+            position:absolute;
+            width:10vw;
+            transform: translateY(30vw) translateX(57vw);
+
+        }
+        main{
+            overflow: hidden;
+            width: 100%;
+            height: 1000px;
+        }
+
+        .map1{
+            width:300vw; 
+            height:auto; 
+            position:relative;
+            --map2move:0;
+            transform: translateX(var(--map2move));
+        }
+
+
+
+
+        

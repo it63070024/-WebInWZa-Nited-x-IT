@@ -1,0 +1,84 @@
+
+        body{
+            background-color: #000000;
+            overflow: hidden;
+            font-family: myfont;
+            font-size:2vw;
+            color: white;
+        }
+
+        @font-face {
+            font-family: myfont;
+            src: url(font/PSLCD3310.ttf);
+        }
+
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+        }
+
+        .floor{
+            position:absolute;
+            width:100%;
+            transform: translateY(41.5vw);
+        }
+        main{
+            overflow: hidden;
+            width: 100%;
+            height: 2000px;
+        }
+        .cha{
+            position: absolute;
+            width:5.5%; 
+            --x: 0;
+            --moveset:0;
+            z-index: 10;
+            /*transform: translateY(675%) translateX(var(--x));*/
+
+            
+        }
+        .c1{
+            position: relative;
+            top: 36.4vw;
+            --moveset:0;
+            left:var(--moveset);
+            z-index: 100;
+        }
+        .map1{
+            width:300vw; 
+            height:auto; 
+            position:relative;
+            --map2move:0;
+            left:var(--map2move);
+        }
+        .text{
+            position: absolute;
+            top:30vw;
+            left:85vw;
+        }
+        .text2{
+            position: absolute;
+            transform: rotate(90deg);
+            top:33vw; 
+            left:90vw;
+        }
+        .left{
+            position: absolute;
+            width: 3vw;
+            top: -4vw;
+            left: -.5vw;
+        }
+        .right{
+            position: absolute;
+            width: 3vw;
+            top: -4vw;
+            left: 3vw;
+        }
+
+
+
+        

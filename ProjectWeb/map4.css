@@ -1,0 +1,222 @@
+/* :root{
+    --border_val:2px;
+}
+body{
+    border: var(--border_val) solid black;
+}
+body>*{
+    border: var(--border_val) solid purple;
+}
+body>*>*{
+    border: var(--border_val) solid blue;
+}
+body>*>*>*{
+    border: var(--border_val) solid green;
+}
+body>*>*>*>*{
+    border: var(--border_val) solid yellow;
+} */
+        body{
+            background-color: #cfcbb2;
+            overflow: hidden;
+            font-family: myfont;
+            font-size:2vw;;
+        }
+        @font-face {
+            font-family: myfont;
+            src: url(font/PSLCD3310.ttf);
+        }
+        text {
+            font-family: myfont; 
+        }
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .floor{
+            position:absolute;
+            width:100%;
+            top: 11.45vw;
+        }
+
+        main{
+            overflow: hidden;
+            width: 100%;
+            height: 1000px;
+        }
+        .close_button{
+            position: absolute;
+            top: 1.45vw;
+            right: 37.9vw;
+        }
+        .closebutton_img{
+            width: 3.4vw;
+        }
+        .next_button{
+            position: absolute;
+            top: 1.45vw;
+            right: 37.9vw;
+        }
+        .nextbutton_img{
+            width: 3.4vw;
+        }
+
+        .popup_wrap{
+            width: 100vw;
+            height: 100vw;
+            display: none;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.725);
+            align-items: center;
+            justify-content: center;
+            z-index: 11;
+        }
+        .popup_lottery{
+            width: 28vw;
+            position: absolute;
+            top:0.3vw;
+        }
+
+        .cha{
+            position: relative;
+            width:5.5vw; 
+
+        }
+        .c1{
+            
+            position: absolute; 
+            width:100%;
+            z-index: 10;
+            --moveset:0;
+            /*transform: translateY(675%) translateX(var(--x));*/
+            top:36.5vw;
+            left:var(--moveset);
+
+        }
+        .map4{
+            width:300vw; 
+            height:auto; 
+            position:relative;
+            --map4move:0;
+            left:var(--map4move);
+        }
+
+        .door{
+            position: absolute;
+            width: 1.9%;
+            top: 32.8vW;
+            left: 5vw;
+            /* transform: translateY(32.8vw) translateX(5vw); */
+        }
+
+        .door2{
+            position: absolute;
+            width: 1.9%;
+            top: 32.8vW;
+            left: 5vw;
+            /* transform: translateY(32.8vw) translateX(5vw); */
+        }
+
+
+        .elmo{
+            position: absolute;
+            width: 1.5%;
+            top: 26vw;
+            left: 5.7vw;
+            /* transform: translateY(26vw) translateX(5.7vw); */
+        }
+
+        .stage{
+            position:absolute;
+            width:60%;
+            top: 20.9vw;
+            left: 20vw;
+            /* transform: translateY(20.9vw) translateX(20vw); */
+        }
+
+        .stage2{
+            position:absolute;
+            width:60%;
+            top: 20.9vw;
+            left: 70vw;
+            /* transform: translateY(20.9vw) translateX(70vw); */
+        }
+
+        .cat{
+            position: absolute;
+            width:1.2%; 
+            z-index: 9;
+            top: 39.3vw;
+            left: 17.5vw;
+            /* transform: translateY(39.5vw) translateX(17.5vw); */
+        }
+
+        .women1{
+            position: absolute;
+            width:1.8%; 
+            top: 32vw;
+            left: 30vw;
+            /* transform: translateY(32vw) translateX(30vw); */
+        }
+
+        .lottery1{
+            position: absolute;
+            top: 28.5vw;
+            /* transform: translateY(28.5vw) translateX(36vw); */
+        }
+        .lottery_1{
+            width: 10vw;
+        }
+        .popup_lotto{
+            width: 7vw;
+            position: absolute;
+            bottom: 2vw;
+        }
+        .women2{
+            position: absolute;
+            width:1.8%; 
+            top: 32vw;
+            left: 110vw;
+            /* transform: translateY(32vw) translateX(110vw); */
+        }
+
+        .lottery_2{
+            position: absolute;
+            top: 24.6vw;
+            left: 117vw;
+            /* transform: translateY(24.6vw) translateX(117vw); */
+            width: 10%;
+        }
+
+        .women3{
+            position: absolute;
+            width:1.8%; 
+            top: 32vw;
+            left: 170vw;
+            /*transform: translateY(32vw) translateX(170vw); */
+        }
+
+        .lottery_3{
+            position: absolute;
+            width: 3.1%;
+            top: 24.6vw;
+        }
+        .check{
+           
+            /* border-style: solid; */
+
+            position: absolute;
+            top: 36.5vw;
+            left: 97vw;
+            z-index: 20;
+        }

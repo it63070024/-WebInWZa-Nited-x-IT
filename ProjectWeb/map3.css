@@ -1,0 +1,190 @@
+
+        body{
+            background-color: #d0e9d4;
+            overflow: hidden;
+            font-family: myfont;
+            font-size:2vw;;
+        }
+
+        @font-face {
+            font-family: myfont;
+            src: url(font/PSLCD3310.ttf);
+        }
+
+        *{
+            margin: 0px;
+            padding:0px;
+        }
+
+        img{
+            image-rendering: pixelated;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+
+        .floor{
+            position:absolute;
+            width:100%;
+            transform: translateY(11.45vw);
+        }
+
+        .chatbox{
+            width: fit-content;
+            block-size: fit-content;
+            position:absolute;
+            background-image: url("./PNG update/Pop up _ effect/chat.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .chatbox p{
+            padding:0.5em .5em 2.5em .5em ;
+            z-index:5;
+        }
+
+        .chatbox-left{
+            width: fit-content;
+            block-size: fit-content;
+            position:absolute;
+            background-image: url("./PNG update/Pop up _ effect/chat.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: scaleX(-1);
+        }
+
+        .chatbox-left p{
+            padding:0.5em .5em 2.5em .5em ;
+            z-index:5;
+            transform:scaleX(-1)
+        }
+
+        .river{
+            position:absolute;
+            width:100%;
+            /* transform: translateY(11.45vw) translateX(-114vw); */
+            top:11.45vw;
+            left:-114vw;
+        }
+        .city{
+            position:absolute;
+            width:100%;
+            transform: translateY(10.9vw);
+        }
+
+        .cloud{
+            position:absolute;
+            width:100%;
+            transform: translateY(13vw);
+        }
+        main{
+            overflow: hidden;
+            width: 100%;
+            height: 1000px;
+        }
+        .cha{
+            position: relative;
+            width:5.5vw; 
+
+        }
+        .c1{
+            
+            position: absolute; 
+            width:100%;
+            z-index: 10;
+            --moveset:0;
+            /*transform: translateY(675%) translateX(var(--x));*/
+            top:36.5vw;
+            left:var(--moveset);
+
+        }
+        .map3{
+            width:300vw; 
+            height:auto; 
+            position:relative;
+            --map3move:0;
+            left:var(--map3move);
+        }
+
+        .boat{
+            position: absolute;
+            width: 7%;
+            /* transform: translateY(38.75vw) translateX(13.4vw); */
+            top:38.75vw;
+            left:13.4vw;
+            z-index: 11;
+        }
+
+        .foreigner{
+            position: absolute;
+            width: 1.9%;
+            /* transform: translateY(34.9vw) translateX(40vw); */
+            top:34.9vw;
+            left:40vw;
+
+        }
+
+        .women1{
+            position: absolute;
+            width: 1.6%;
+            /* transform: translateY(34.1vw) translateX(72vw); */
+            top:34.1vw;
+            left:72vw;
+
+        }
+
+        .person1{
+            position: absolute;
+            width: 1.9%;
+            /* transform: translateY(36.6vw) translateX(135vw); */
+            top:36.6vw;
+            left:135vw;
+        }
+
+        .person2{
+            position: absolute;
+            width: 1.6%;
+            /* transform: translateY(36.5vw) translateX(148vw); */
+            top:36.5vw;
+            left:148vw;
+        }
+
+        .jar{
+            position: absolute;
+            width: 9%;
+            /* transform: translateY(33.42vw) translateX(70vw); */
+            top:33.42vw;
+            left:70vw;
+        }
+
+        .wanted{
+            position: absolute;
+            width: 8%;
+            /* transform: translateY(23.3vw) translateX(131vw); */
+            top:23.3vw;
+            left:131vw;
+        }
+
+        .train{
+            position: absolute;
+            width: 8%;
+            /* transform: translateY(26.75vw) translateX(200vw); */
+            top:26.75vw;
+            left:200vw;
+        }
+        .check{
+           
+            /* border-style: solid; */
+
+            position: absolute;
+            top: 36.5vw;
+            left: 97vw;
+            z-index: 20;
+        }
+
+
+
+
+        
