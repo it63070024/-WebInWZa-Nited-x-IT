@@ -232,4 +232,34 @@
             font-family: myfont;
             src: url(font/PSLCD3310.ttf);
         }
+        .chatbox{
+            width: fit-content;
+            block-size: fit-content;
+            position:absolute;
+            background-image: url("./PNG update/Pop up _ effect/chat.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            image-rendering: pixelated;
+        }
 
+        .chatbox p{
+            padding:0.5em .5em 2.5em .5em ;
+            z-index:5;
+        }
+
+        .chatbox-left{
+            width: fit-content;
+            block-size: fit-content;
+            position:absolute;
+            background-image: url("./PNG update/Pop up _ effect/chat.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            transform: scaleX(-1);
+            image-rendering: pixelated;
+        }
+
+        .chatbox-left p{
+            padding:0.5em .5em 2.5em .5em ;
+            z-index:5;
+            transform:scaleX(-1)
+        }
