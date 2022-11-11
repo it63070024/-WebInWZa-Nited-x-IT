@@ -85,6 +85,7 @@ document.addEventListener('keydown', function (event) {
     mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 
     if (check_end.offsetLeft - cha_offset.offsetLeft <= 0) {
+        check = 1
         newmap()
     }
 
