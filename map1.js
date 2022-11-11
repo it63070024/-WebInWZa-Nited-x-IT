@@ -3,13 +3,22 @@ let num2 = Math.floor(100000 + Math.random() * 900000);
 let num3 = Math.floor(100000 + Math.random() * 900000);
 let won_num = Math.floor(100000 + Math.random() * 900000);
 randomnum()
+
+
+var front_back = 1;
+var turn = 0;
+var walk = 0;
+
+
 var check = 0;
 var collision = 0;
 var check_text = 0;
+
 function hidehuay() {
     document.getElementById("pang_h").style.display = "none"
     check = 0
 }
+
 function hidetv() {
     document.getElementById("tvh").style.display = "none"
     check = 0
@@ -51,17 +60,33 @@ document.addEventListener('keydown', function (event) {
     mid = check_offset.offsetLeft - cha_offset.offsetLeft;
     if ((cha_offset.offsetLeft >= check_end.offsetLeft)) {
         check=1;
-        document.getElementById("c1").style.animation = "example 0.3s forwards";
+        document.getElementById("c1").style.animation = "fall 0.3s forwards";
         setTimeout(newmap, 500);
     }
     /*D*/
 
 
+    ////////////////////////////////////////////////////////////////////////////////////
+    // เดิน
     if ((event.keyCode == 68 || event.keyCode == 39) && (window.innerWidth * 0.35) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
         y += 0.8;
         py = y + 'vw';
+        
         character.style.setProperty('--moveset', py);
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha.gif");
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+
         console.log("1");
 
     }
@@ -71,7 +96,20 @@ document.addEventListener('keydown', function (event) {
         py = y + 'vw';
         character.style.setProperty('--moveset', py);
 
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha.gif")
+
+        front_back = Math.abs(front_back)
+        walk += 1
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+        
         console.log("2")
 
     }
@@ -82,7 +120,19 @@ document.addEventListener('keydown', function (event) {
         my = m + 'vw';
         map1m.style.setProperty('--map1move', my)
         character.style.setProperty('--moveset', py);
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha.gif")
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
         console.log("3")
     }
 
@@ -95,9 +145,22 @@ document.addEventListener('keydown', function (event) {
     if ((event.keyCode == 65 || event.keyCode == 37) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.35) >= check_end.offsetLeft && check == 0) {
         y -= 0.8;
         py = y + 'vw';
-
         character.style.setProperty('--moveset', py)
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha_flip.gif")
+
+
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        
         console.log("4")
     }
 
@@ -108,7 +171,18 @@ document.addEventListener('keydown', function (event) {
         my = m + 'vw';
         map1m.style.setProperty('--map1move', my)
         character.style.setProperty('--moveset', py);
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha_flip.gif")
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
         console.log("5")
     }
     else if ((event.keyCode == 65 || event.keyCode == 37) && y > 1 && check == 0) {
@@ -117,11 +191,25 @@ document.addEventListener('keydown', function (event) {
         py = y + 'vw';
         character.style.setProperty('--moveset', py);
 
-
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha_flip.gif")
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
         console.log("6")
     }
 
+    ////////////////////////////////////////////////////////////////////////////////////////////
+    
+
+    
     if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 50) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
@@ -142,6 +230,20 @@ document.addEventListener('keydown', function (event) {
         document.querySelector(".shrine_talk").style.opacity = 100;
         console.log("sarn")
 
+    }
+
+})
+
+
+document.addEventListener('keyup', function (event) {
+
+    if (event.keyCode == 65 || event.keyCode == 37 || event.keyCode == 68 || event.keyCode == 39) {
+        if (Math.sign(front_back) == 1) {
+            character_img.setAttribute("src", "./PNG update/Map1/character/main_cha.gif")
+        }
+        else if (Math.sign(front_back) == -1) {
+            character_img.setAttribute("src", "./PNG update/Map1/character/main_cha_flip.gif")
+        }
     }
 
 })

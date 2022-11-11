@@ -95,7 +95,7 @@ body>*>*>*>*{
         .c1{
             
             position: absolute; 
-            width:100%;
+            width:fit-content;
             z-index: 10;
             --moveset:0;
             /*transform: translateY(675%) translateX(var(--x));*/

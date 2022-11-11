@@ -38,6 +38,7 @@
             background-image: url("./PNG update/Pop up _ effect/chat.png");
             background-repeat: no-repeat;
             background-size: 100% 100%;
+            image-rendering: pixelated;
         }
 
         .chatbox p{
@@ -53,6 +54,7 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
             transform: scaleX(-1);
+            image-rendering: pixelated;
         }
 
         .chatbox-left p{
@@ -174,6 +176,13 @@
             top:26.75vw;
             left:200vw;
         }
+        .hole{
+            position: absolute;
+            width: 2.4%;
+            /* transform: translateY(26.75vw) translateX(200vw); */
+            top:43.5vw;
+            left:209vw;
+        }
         .check{
            
             /* border-style: solid; */
@@ -184,7 +193,73 @@
             z-index: 20;
         }
 
+        .hidden_img1{
+            position: fixed;
+            width: 50vw;
+            z-index: 100;
+            display: inline;
+            top: 10vw;
+            left: 25vw;
+        }
+
+        .hidden_img2{
+            position: fixed;
+            width: 30vw;
+            z-index: 100;
+            display: inline;
+            top: 5vw;
+            left: 33vw;
+        }
+
+        .hidden_img3{
+            position: fixed;
+            width: 25vw;
+            z-index: 100;
+            display: inline;
+            top: 5vw;
+            left: 35vw;
+        }
+        .hidden_x{
+            position: fixed;
+            width: 1vw;
+            z-index: 100;
+            display: inline;
+            top: 15vw;
+            left: 65vw;
+        }
 
 
+        .popup_wrap{
+            width: 100vw;
+            height: 100vw;
+            display: none;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.725);
+            align-items: center;
+            justify-content: center;
+            z-index: 11;
+        }
 
+        @keyframes fall {
+            0%   {top:36.5vw;}
+            100% {top: 40vw;}
+          }
         
+        :root{
+            /* --border_val:2px; */
+        }
+        body{
+            border: var(--border_val) solid black;
+        }
+        body>*{
+            border: var(--border_val) solid purple;
+        }
+        body>*>*{
+            border: var(--border_val) solid blue;
+        }
+        body>*>*>*{
+            border: var(--border_val) solid green;
+        }
+        body>*>*>*>*{
+            border: var(--border_val) solid yellow;
+        }

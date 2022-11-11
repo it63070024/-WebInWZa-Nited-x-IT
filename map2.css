@@ -43,15 +43,24 @@
             overflow: hidden;
             width: 100%;
             height: 1000px;
+
         }
         .cha{
             position: relative;
-            width:5.5%; 
-            --x: 0;
-            --moveset:0;
+            width:5.5vw; 
+
+        }
+        .c1{
+            
+            position: absolute; 
+            width:fit-content;
             z-index: 10;
+            --moveset:0;
             /*transform: translateY(675%) translateX(var(--x));*/
-            transform: translateY(662%) translateX(var(--moveset));
+            top:36.5vw;
+            left:var(--moveset);
+            
+
         }
         .chinese1{
             position: absolute;
@@ -114,6 +123,7 @@
             width: 2.7%;
             left: 85.45vw;
             top: 32vw;
+            z-index: 4;
             /* transform: translateY(32vw) translateX(85.45vw);  */
         }
 
@@ -144,7 +154,7 @@
         .stand{
             position: absolute;
             width: 3%;
-            left: 167vw;
+            left: 157vw;
             top: 38.8vw;
             /* transform: translateY(38.8vw) translateX(167vw);  */
         }
@@ -152,7 +162,7 @@
         .chinese_hong{
             position: absolute;
             width: 1.9%;
-            left: 170vw;
+            left: 160vw;
             top: 33.7vw;
             /* transform: translateY(33.7vw) translateX(170vw);  */
         }
@@ -222,6 +232,23 @@
             top: 41.5vw;
             /* transform: translateY(41.5vw) translateX(144.6vw);  */
         }
+
+        .hai4{
+            position: absolute;
+            width: 1.4%;
+            left: 250.6vw;
+            top: 41.7vw;
+            /* transform: translateY(41.5vw) translateX(144.6vw);  */
+        }
+
+        .hole{
+            position: absolute;
+            width: 2.4%;
+            height: 1vw;
+            left: 249vw;
+            top: 41.5vw;
+            /* transform: translateY(41.5vw) translateX(144.6vw);  */
+        }
         .ong{
             position: absolute;
             width: 3%;
@@ -240,6 +267,7 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
             image-rendering: pixelated;
+            display: none;
         }
 
         .chatbox p{
@@ -256,6 +284,7 @@
             background-size: 100% 100%;
             transform: scaleX(-1);
             image-rendering: pixelated;
+            display: none;
         }
 
         .chatbox-left p{
@@ -263,3 +292,76 @@
             z-index:5;
             transform:scaleX(-1)
         }
+
+        .check{
+           
+            border-style: solid;
+
+            position: absolute;
+            top: 36.5vw;
+            left: 97vw;
+            z-index: 20;
+        }
+
+        .map_text{
+            position: absolute;
+            top: 7vw;
+            left: 20vw;
+            width: 36vw;
+            color: black;
+            opacity: 100;
+            font-size: 2vw;
+            text-shadow: 1px 1px rgba(255, 255, 255, 0.563);
+            
+            
+        }
+
+        .popup_wrap{
+            width: 100vw;
+            height: 100vw;
+            display: none;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.725);
+            align-items: center;
+            justify-content: center;
+            z-index: 11;
+        }
+        .popup_lottery{
+            width: 28vw;
+            position: absolute;
+            top:0.3vw;
+        }
+
+        .close_button{
+            position: absolute;
+            top: 1.45vw;
+            right: 37.9vw;
+            width: fit-content;
+        }
+        .closebutton_img{
+            width: 3.4vw;
+        }
+
+        :root{
+            /* --border_val:2px; */
+        }
+        body{
+            border: var(--border_val) solid black;
+        }
+        body>*{
+            border: var(--border_val) solid purple;
+        }
+        body>*>*{
+            border: var(--border_val) solid blue;
+        }
+        body>*>*>*{
+            border: var(--border_val) solid green;
+        }
+        body>*>*>*>*{
+            border: var(--border_val) solid yellow;
+        }
+
+        @keyframes fall {
+            0%   {top:36.5vw;}
+            100% {top: 38vw;}
+          }

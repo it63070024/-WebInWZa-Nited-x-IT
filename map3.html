@@ -19,7 +19,7 @@
         </div>
         
         <div class="map3" id="map3">
-            <div class="c1" id="c1" style="position: absolute; width:100%;">
+            <div class="c1" id="c1" style="position: absolute; width:fit-content;">
                 <img src="./PNG update/Map1/character/main_cha.gif" class="cha" id="cha">
             </div>
     
@@ -29,26 +29,44 @@
 
             <img class="river" src="./PNG update/Map3/scene/IMG_5905.PNG" alt="">
             <img class="boat" src="./PNG update/Map3/edit/harbor.png" alt="">
-            <img class="jar" src="./PNG update/Map3/edit/Stand.png" alt="">
-            <img class="wanted" src="./PNG update/Map3/edit/Wanted.png" alt="">
+            <img onclick="hiddenPopup3()" class="jar" src="./PNG update/Map3/edit/Stand.png" alt="">
+            <img onclick="hiddenPopup2()" class="wanted" src="./PNG update/Map3/edit/Wanted.png" alt="">
             <img class="train" src="./PNG update/Map3/edit/Train.png" alt="">
+            <img class="hole" src="./PNG update/Map2/hole_new.png" alt="">
 
-            <img class="foreigner" src="./PNG update/character/Farang.gif" alt="">
+            <img onclick="hiddenPopup()" class="foreigner" src="./PNG update/character/Farang.gif" alt="">
             <img class="women1" src="./PNG update/character/Employee1.gif" alt="">
             <img class="person1" src="./PNG update/character/Condahwanted_1.gif" alt="">
             <img class="person2" src="./PNG update/character/Condahwanted_2.gif"alt="">
-
-            <div class="chatbox" style="top:23vw; left:14.5vw;" id="c1">
-                <p>แฮปปี้เบิร์ดเดย์ my king Rama 5! <br>ไอมีของขวัญเป็นลอตเตอรี่ยุโรปมาให้!</p>
-            </div>
-            <div class="chatbox" style="top:23vw; left:100vw;" id="c2">
-                <p>เพราะไอเจ้าพระยานนทิเสนสุเรนทรภักดีอะไรนั่นแท้ๆ<br>ทำให้โดนยกเลิกหวยกันทั่วบ้านทั่วเมือง !</p>
-            </div>
-            <div class="chatbox-left" style="top:23vw; left:145vw;" id="c3">
-                <p>ใช่ๆ อยู่ดีไม่ว่าดีดันไปโกงหวยซะงั้น โลภมากจริงๆ<br>ถ้าจะมีหวยให้เราเล่นอีกรอบต้องเลิกทำให้เป็นกล่องทึบแล้วล่ะ</p>
-            </div>
             
+            <div onclick="hide_chat()" class="chatbox" style="top:20vw; left:16.5vw; opacity: 0;" id="chat1">
+                <p>แฮปปี้เบิร์ดเดย์ my king Rama 5! <br>ไอมีของขวัญเป็นลอตเตอรี่ยุโรปมาให้! <br><br></p>
+                <img src="./PNG update/Pop up _ effect/arr.gif" style="position:absolute; top:7vw; left:26vw; width: 3vw;">
+            </div>
+            <div class="chatbox" style="top:24vw; left:117vw; font-size: 1.5vw; opacity: 0;" id="chat2">
+                <p>เพราะไอเจ้าพระยานนทิเสนสุเรนทรภักดี <br> อะไรนั่นแท้ๆทำให้โดนยกเลิกหวยกัน <br> ทั่วบ้านทั่วเมือง !</p>
+            </div>
+            <div class="chatbox-left" style="top:24vw; left:147vw; font-size: 1.5vw; opacity: 0;" id="chat3">
+                <p>ใช่ๆ อยู่ดีไม่ว่าดีดันไปโกงหวยซะงั้น <br> โลภมากจริงๆถ้าจะมีหวยให้เราเล่นอีกรอบ <br> ต้องเลิกทำให้เป็นกล่องทึบแล้วล่ะ</p>
+            </div>
+        </div>
         
+        <div class="popup_wrap" id="popup1">
+            <img class="hidden_img1" alt="">
+            <img onclick="closePopup()" class="hidden_x" src="./PNG update/Pop up _ effect/Hidden message_x.png" alt="">
+            </div>
+        
+    
+
+            <div class="popup_wrap" id="popup2">
+                <img class="hidden_img2" alt="">
+                <img onclick="closePopup()" style="top: 7vw; left: 60vw;" class="hidden_x" src="./PNG update/Pop up _ effect/Hidden message_x.png" alt="">
+                </div> 
+
+                <div class="popup_wrap" id="popup3">
+                    <img class="hidden_img3" alt="">
+                    <img style="width: 3.4vw; top:6vw; left:55vw;" onclick="closePopup()" class="hidden_x" src="./PNG update/Pop up _ effect/Pop up_x.png" alt="">
+                    </div>
     </main>
   
 

@@ -17,7 +17,7 @@ body>*>*>*>*{
     border: var(--border_val) solid yellow;
 }
            
-           @keyframes example {
+           @keyframes fall {
             0%   {top:36.5vw;}
             100% {top: 38vw;}
           }
@@ -83,6 +83,7 @@ body>*>*>*>*{
             /*transform: translateY(675%) translateX(var(--x));*/
             top:36.5vw;
             left:var(--moveset);
+            
 
         }
         .yai{
@@ -266,17 +267,18 @@ body>*>*>*>*{
             color: white;
             opacity: 0;
             text-shadow: 1px 1px 1px rgb(0, 0, 0);
-     
+            background-color: rgba(0, 0, 0, 0.515);
 
         }
         .shrine_talk{
             position: absolute;
-            top: 25vw;
+            top: 23vw;
             left: 175vw;
             color: black;
             opacity: 0;
             font-size: 1.5vw;
-            text-shadow: 1px 1px rgba(255, 255, 255, 0.363);
+            text-shadow: 1px 1px rgba(255, 255, 255, 0.563);
+            
             
         }
 
