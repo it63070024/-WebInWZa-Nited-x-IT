@@ -1,0 +1,66 @@
+
+
+        .menu_background{
+            width: 100vw;
+            height: 100vw;
+            display: none;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.725);
+            align-items: center;
+            justify-content: center;
+            z-index: 12;
+        }
+
+        .menu_wrap{
+            display: absolute;
+        }
+
+        .burger_button{
+            position: fixed;
+            right: 0vw;
+            top: 0vw;
+            z-index: 13;
+
+        }
+
+        .menu_container{
+            width: 28vw;
+            position: absolute;
+            top:0.3vw;
+        }
+        .button{
+            position: fixed;
+        }
+
+        .button.map2{
+            width: 16vw; height:3.4vw;
+            top: 9.5vw; 
+        }
+        .button.map3{
+            width: 16vw; height:3.4vw;
+            top: 13vw;
+        }
+        .button.mapmodern{
+            width: 16vw; height:3.4vw;
+            top: 16.5vw;
+        }
+        .button.reset{
+            width: 7vw; height:7vw;
+            top: 22.5vw;
+            right: 51vw;
+        }
+        .button.mute{
+            width: 7vw; height:7vw;
+            top: 22.5vw;
+            right: 42vw;
+        }
+        .button.about{
+            width: 16vw; height:7vw;
+            top: 31vw;
+        }
+
+        .frame{
+            width: 28vw;
+            position: absolute;
+            top:0.3vw;
+        }
