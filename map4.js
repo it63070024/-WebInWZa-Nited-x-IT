@@ -338,7 +338,7 @@ function walkingRight(){
         py = y + 'vw';
         m -= 0.8;
         my = m + 'vw';
-        map1m.style.setProperty('--map1move', my)
+        map4m.style.setProperty('--map4move', my)
         character.style.setProperty('--moveset', py);
 
         walk += 1
@@ -405,7 +405,7 @@ function walkingLeft(){
         py = y + 'vw';
         m += 0.8;
         my = m + 'vw';
-        map1m.style.setProperty('--map1move', my)
+        map4m.style.setProperty('--map4move', my)
         character.style.setProperty('--moveset', py);
         front_back = -Math.abs(front_back)
         walk += 1
