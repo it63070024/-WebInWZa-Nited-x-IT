@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="map3.css">
+    <link rel="stylesheet" href="burger.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>มิตรรักนักสุ่ม</title>
 
@@ -62,18 +63,42 @@
             <div class="popup_wrap" id="popup2">
                 <img class="hidden_img2" alt="">
                 <img onclick="closePopup()" style="top: 7vw; left: 60vw;" class="hidden_x" src="./PNG update/Pop up _ effect/Hidden message_x.png" alt="">
-                </div> 
+            </div> 
 
-                <div class="popup_wrap" id="popup3">
-                    <img class="hidden_img3" alt="">
-                    <img style="width: 3.4vw; top:6vw; left:55vw;" onclick="closePopup()" class="hidden_x" src="./PNG update/Pop up _ effect/Pop up_x.png" alt="">
-                    </div>
+            <div class="popup_wrap" id="popup3">
+                <img class="hidden_img3" alt="">
+                <img style="width: 3.4vw; top:6vw; left:55vw;" onclick="closePopup()" class="hidden_x" src="./PNG update/Pop up _ effect/Pop up_x.png" alt="">
+            </div>
+
+            <div class="menu_background" id="menu">
+
+                <img class="menu_container" id="menu_con">
+    
+                <img class="frame" id="fm2" src="./PNG update/UI/burger menu/R3-01.png">
+                <img class="frame" id="fm3" src="./PNG update/UI/burger menu/R5-01.png">
+                <img class="frame" id="fmm" id="frs" src="./PNG update/UI/burger menu/new-01.png">
+                <img class="frame" id="frs"  src="./PNG update/UI/burger menu/re.png">
+                <img class="frame" id="fmt" src="./PNG update/UI/burger menu/song.png">
+                <img class="frame" id="fabt" src="./PNG update/UI/burger menu/about.png">
+    
+                <div onclick="gotomap2()" class="button map2"  onmouseover="hoverm2()" onmouseout="unhoverm2()"></div>
+                <div onclick="gotomap3()" class="button map3r56"  onmouseover="hoverm3()" onmouseout="unhoverm3()"></div>
+                <div onclick="gotomap4()" class="button mapmodern"  onmouseover="hovermm()" onmouseout="unhovermm()"></div>
+                <div onmouseup="reset()" class="button reset"  onmousedown="hoverrs()"></div>
+                <div onmouseup="mute()" class="button mute" onmousedown="hovermt()"></div>
+                <div onmouseup="about()" class="button about" onmousedown="hoverabt()"></div>
+            </div>
+    
+            <div class="burger_button" onclick="callMenu()">
+                <img style="width: 5vw; transform-origin: top left;" src="./PNG update/UI/burger menu/burgerlogo.png">
+            </div>
     </main>
   
 
 
 <script src="map3.js"></script>
 <script src="plzrotate.js"></script>
+<script src="burger.js"></script>
 
     <!--<script>
         let app = new Vue({
