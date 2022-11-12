@@ -55,6 +55,11 @@
             --map2move:0;
             left:var(--map2move);
         }
+        .scene{
+            position:absolute;
+            width: 100vw;
+            top: 18.3vw;
+        }
         .text{
             position: absolute;
             top:30vw;
