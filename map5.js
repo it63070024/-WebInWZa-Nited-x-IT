@@ -45,10 +45,14 @@ function hidetv() {
     }
     
     
-    if(sessionStorage.hiddenCheck1 && sessionStorage.hiddenCheck2 && sessionStorage.hiddenCheck3){
+    if(sessionStorage.hiddenCheck1 && sessionStorage.hiddenCheck2 && sessionStorage.hiddenCheck3){ //good ending
         document.querySelector(".won_number").innerHTML = selected_huay
+        check = 1;
+        setTimeout(() => { document.getElementById("c6").style.display = 'inline' }, 3000);
+        setTimeout(() => { document.getElementById("p1").style.display = "flex" }, 8000);
+        setTimeout(() => { document.getElementById("p1").style.animation = "popup 3s forwards linear" }, 8000);
     }
-    else{
+    else{//bad end
         document.querySelector(".won_number").innerHTML = num4-10+1
     }
     
