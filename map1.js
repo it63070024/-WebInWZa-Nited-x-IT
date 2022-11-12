@@ -495,8 +495,8 @@ bun1.addEventListener('touchstart', walkingLeft) //ตั้ง eventlisttener �
 bun1.addEventListener('touchend', timeoutClearRight);
 
 
-bun.addEventListener('contextmenu', event => event.preventDefault());
-bun1.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('contextmenu', event => event.preventDefault());
+
 
 //phonewalk
 /////////////////////////////////////////////////////////////////////////////////////////
