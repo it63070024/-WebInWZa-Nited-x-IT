@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="tutorial.css">
+    <link rel="stylesheet" href="burger.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>มิตรรักนักสุ่ม</title>
 
@@ -28,11 +29,42 @@
 
         <p class="text">ลองเดินมานี่่สิ</p>
         <p class="text2">-></p>
+
+
+
+
+
+
+
+
+        <div class="menu_background" id="menu">
+
+            <img class="menu_container" id="menu_con">
+
+            <img class="frame map2" id="fm2" src="./PNG update/UI/burger menu/R3-01.png">
+            <img class="frame map3" id="fm3" src="./PNG update/UI/burger menu/R5-01.png">
+            <img class="frame mapmodern" id="fmm" id="frs" src="./PNG update/UI/burger menu/new-01.png">
+            <img class="frame reset" id="frs"  src="./PNG update/UI/burger menu/re.png">
+            <img class="frame mute" id="fmt" src="./PNG update/UI/burger menu/song.png">
+            <img class="frame about" id="fabt" src="./PNG update/UI/burger menu/about.png">
+
+            <div onclick="gotomap2()" class="button map2"  onmouseover="hoverm2()" onmouseout="unhoverm2()"></div>
+            <div onclick="gotomap3()" class="button map3"  onmouseover="hoverm3()" onmouseout="unhoverm3()"></div>
+            <div onclick="gotomap4()" class="button mapmodern"  onmouseover="hovermm()" onmouseout="unhovermm()"></div>
+            <div onmouseup="reset()" class="button reset"  onmousedown="hoverrs()"></div>
+            <div onmouseup="mute()" class="button mute" onmousedown="hovermt()"></div>
+            <div onmouseup="about()" class="button about" onmousedown="hoverabt()"></div>
+        </div>
+
+        <div class="burger_button" onclick="callMenu()">
+            <img style="width: 5vw; transform-origin: top left;" src="./PNG update/UI/burger menu/burgerlogo.png">
+        </div>
     </main>
   
 
 
 <script src="tutorial.js"></script>
 <script src="plzrotate.js"></script>
+<script src="burger.js"></script>
 </body>
 </html>
