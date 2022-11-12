@@ -1,6 +1,15 @@
 
+     @keyframes OpenL {
+        0%   {left:5vw;}
+        100% {left:-30vw;}
+      }
+      @keyframes OpenR {
+        0%   {left:5vw;}
+        100% {left:40vw;}
+      }
+
         body{
-            background-color: #b38255;
+            background-color: #b05447;
             overflow: hidden;
             font-family: myfont;
             font-size:2vw;;
@@ -33,6 +42,19 @@
             transform: translateY(30vw) translateX(33vw);
 
         }
+        .OpenL{
+            position:absolute;
+            width:90vw;
+            left: 5vw;
+
+
+        }
+        .OpenR{
+            position:absolute;
+            width:90vw;
+            left: 5vw;
+
+        }
 
         .lottery2{
             position:absolute;
@@ -54,7 +76,6 @@
             transform: translateX(var(--map2move));
         }
 
-
-
+       
 
         
