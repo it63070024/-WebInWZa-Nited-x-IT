@@ -186,11 +186,12 @@ body>*>*>*>*{
 
         .chat1[data-flip = '-1']{
             transform: scaleX(-1);
-            width: 50%;
+            width: 60%;
+            height: 70%;
 
         }
         .dialog[data-flip = '-1']{
-            top:12vw; left:35vw;
+            top:15vw; left:35vw;
 
 
         }
@@ -243,7 +244,7 @@ body>*>*>*>*{
             position: absolute;
             z-index: 10;
             width: 8%;
-             top:17vw; left:11vw;
+             top:16vw; left:14vw;
         }
 
         .next[data-flip = '2']{
@@ -258,9 +259,10 @@ body>*>*>*>*{
             top: -4vw;
             left: -2vw;
             color: white;
-            opacity: 0;
+            opacity: 100;
             text-shadow: 1px 1px 1px rgb(0, 0, 0);
-     
+            display: inline;
+            background-color: rgba(0, 0, 0, 0.515);
 
         }
         .shrine_talk{
@@ -272,6 +274,12 @@ body>*>*>*>*{
             font-size: 1.5vw;
             text-shadow: 1px 1px rgba(255, 255, 255, 0.363);
             
+        }
+
+        .won_number{
+            position: absolute;
+            font-size: 7vw;
+            top:20.9vw; left:108.5vw;
         }
 
         audio::-webkit-media-controls-timeline,

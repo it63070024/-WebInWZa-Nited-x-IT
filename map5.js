@@ -10,9 +10,25 @@ randomnum()
 var check = 0;
 var collision = 0;
 var check_text = 0;
-function hidehuay() {
+
+var selected_huay
+
+
+function hidehuay(num) {
     document.getElementById("pang_h").style.display = "none"
     check = 0
+
+    if (num == 1) {
+        selected_huay = num1
+    }
+    else if (num == 2) {
+        selected_huay = num2
+    }
+
+    else if (num == 3) {
+        selected_huay = num3
+    }
+
 }
 function hidetv() {
     document.getElementById("tvh").style.display = "none"
@@ -24,7 +40,7 @@ function hidetv() {
         console.log("if")
     }
     
-    
+    document.querySelector(".won_number").innerHTML = selected_huay
 }
 
 
@@ -44,8 +60,10 @@ const women_offset = document.querySelector(".women_map1");
 const shrine_offset = document.querySelector(".shrine");
 
 var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
-var y = 0;
+var y = 5;
+py = y + 'vw';
 var m = 0;
+character.style.setProperty('--moveset', py);
 
 document.addEventListener('keydown', function (event) {
 
@@ -162,8 +180,7 @@ let app = new Vue({
     el: '.dialog',
     data: {
         mes: ["เอ้าว่าไงไอ้หนุ่ม สนใจมาวัดดวงกับป้ามั้ย อีกไม่กี่ใบก็หมดแล้วรับรองรวย ไม่ต้องทำงานงกๆหน้าคอมไปอีกนาน อีกไม่กี่นาทีก็จะประกาศผลแล้วเด้อ"
-            , "เอ่อ...ก็ได้ครับ"
-            , "ขอให้โชคดีนะพ่อหนุ่ม"],
+            , "...ลองอีกรอบก็ได้วะ"],
         talker: 0
 
     },
@@ -181,11 +198,7 @@ let app = new Vue({
                 document.querySelector('.chat1').dataset.flip = -1
                 document.querySelector('.next').dataset.flip = -1
             }
-            else if (this.talker == 2) {
-                document.querySelector('.dialog').dataset.flip = 2
-                document.querySelector('.chat1').dataset.flip = 2
-                document.querySelector('.next').dataset.flip = 2
-            }
+
 
 
             else {
@@ -199,18 +212,16 @@ let app = new Vue({
 })
 
 
+setTimeout(() => { document.querySelector(".bon1").style.display = "none" }, 3000); 
+
+
+
+
+
 
 function timedText() {
     var x = document.querySelector(".bon1");
     check_text = 1;
-    setTimeout(() => { x.style.opacity = "100" }, 1000);
-    setTimeout(() => { x.innerHTML = "อ๊าก ! หวยแดก !" }, 1000);
-    setTimeout(() => { x.innerHTML = "อะไรเนี่ย โกงกันรึเปล่า !?" }, 3000);
-    setTimeout(() => { x.innerHTML = "ใครมันเป็นคนสรรหาคิดวิธีการ <br> ขูดรีดชาวบ้านชนชั้นกลางแบบนี้เนี่ย <br> อย่าให้รู้นะ ! หลอกลวงที่สุด!" }, 6000);
-    setTimeout(() => { x.style.top = "-7vw" }, 6000);
-    setTimeout(() => { x.style.left = "-5vw" }, 6000);
-    setTimeout(() => { x.style.fontSize = "1.4vw" }, 6000);
-    setTimeout(() => { x.style.opacity = "0" }, 12000);
-    
+      
 }
 
