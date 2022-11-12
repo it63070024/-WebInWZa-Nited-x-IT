@@ -60,14 +60,7 @@ var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 var y = 0;
 var m = 0;
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    bun.style.display = "inline"
-    bun2.style.display = "inline"
-   }
-else{
-    bun.style.display = "none"
-    bun1.style.display = "none"
-}
+
 
 document.addEventListener('keydown', function (event) {
 
@@ -507,6 +500,14 @@ bun1.addEventListener('touchend', timeoutClearRight);
 
 document.addEventListener('contextmenu', event => event.preventDefault());
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    bun.style.display = "inline"
+    bun2.style.display = "inline"
+   }
+else{
+    bun.style.display = "none"
+    bun1.style.display = "none"
+}
 
 //phonewalk
 /////////////////////////////////////////////////////////////////////////////////////////
