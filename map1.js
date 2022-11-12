@@ -299,8 +299,204 @@ let app = new Vue({
     }
 })
 
+/////////////////////////////////////////////////////////////////////////////////////////
+//phonewalk
+
+const bun = document.querySelector('.clickR') //ปุ่มที่จะใช้กด
+const bun1 = document.querySelector('.clickL')
+var walkRight = false; //เช็คเดินขวา
+var walkLeft = false; //เช็คเดินซ้าย
+let timer
+
+function timeoutClearRight() {
+    clearTimeout(timer);
+    walkRight = false
+    walkLeft = false
+}
+
+function walkingRight(){
+    walkRight = true
+    mid = check_offset.offsetLeft - cha_offset.offsetLeft;
+    if ((cha_offset.offsetLeft >= check_end.offsetLeft)) {
+        check=1;
+        document.getElementById("c1").style.animation = "fall 0.3s forwards";
+        setTimeout(newmap, 500);
+    }
+    /*D*/
 
 
+    ////////////////////////////////////////////////////////////////////////////////////
+    // เดิน
+    if ((walkRight && !walkLeft) && (window.innerWidth * 0.35) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
+        y += 0.8;
+        py = y + 'vw';
+        
+        character.style.setProperty('--moveset', py);
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+
+        console.log("1");
+
+    }
+
+    else if ((walkRight && !walkLeft) && mid > check_offset.offsetLeft / 2 && check == 0) {
+        y += 0.8;
+        py = y + 'vw';
+        character.style.setProperty('--moveset', py);
+
+
+        front_back = Math.abs(front_back)
+        walk += 1
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+        
+        console.log("2")
+
+    }
+    else if ((walkRight && !walkLeft) && mid <= (check_offset.offsetLeft / 2) && check == 0) {
+        y += 0.8;
+        py = y + 'vw';
+        m -= 0.8;
+        my = m + 'vw';
+        map1m.style.setProperty('--map1move', my)
+        character.style.setProperty('--moveset', py);
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+        console.log("3")
+    }
+    timer = setTimeout(walkingRight,33);
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 50) && collision == 0) {
+        document.getElementById("dia").style.display = "inline"
+        check = 1
+        collision = 1
+    }
+
+    if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
+        check = 1
+        document.getElementById("tvh").style.display = "inline"
+        document.querySelector("video").play();
+
+        setTimeout(hidetv, 4700)
+        tv_show = 1
+
+    }
+
+    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150) {
+        document.querySelector(".shrine_talk").style.opacity = 100;
+        console.log("sarn")
+
+    }
+}
+
+function walkingLeft(){
+    walkLeft = true
+    mid = check_offset.offsetLeft - cha_offset.offsetLeft;
+    if ((walkLeft && !walkRight) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.35) >= check_end.offsetLeft && check == 0) {
+        y -= 0.8;
+        py = y + 'vw';
+        character.style.setProperty('--moveset', py)
+
+
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        
+        console.log("4")
+    }
+
+    else if ((walkLeft && !walkRight) && y >= 0 && m < -1 && check == 0) {
+        y -= 0.8;
+        py = y + 'vw';
+        m += 0.8;
+        my = m + 'vw';
+        map1m.style.setProperty('--map1move', my)
+        character.style.setProperty('--moveset', py);
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        console.log("5")
+    }
+    else if ((walkLeft && !walkRight) && y > 1 && check == 0) {
+
+        y -= 0.8;
+        py = y + 'vw';
+        character.style.setProperty('--moveset', py);
+
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        console.log("6")
+    }
+    timer = setTimeout(walkingLeft,33);
+}
+
+bun.addEventListener('mousedown', walkingRight) //ตั้ง eventlisttener ที่ปุ่มกด
+bun.addEventListener('mouseup', timeoutClearRight);
+bun.addEventListener('mouseleave', timeoutClearRight);
+
+bun1.addEventListener('mousedown', walkingLeft) //ตั้ง eventlisttener ที่ปุ่มกด
+bun1.addEventListener('mouseup', timeoutClearRight);
+bun1.addEventListener('mouseleave', timeoutClearRight);
+
+//phonewalk
+/////////////////////////////////////////////////////////////////////////////////////////
 function timedText() {
     var x = document.querySelector(".bon1");
     check_text = 1;
