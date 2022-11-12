@@ -499,7 +499,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     bun.style.display = "inline"
     bun1.style.display = "inline"
-    document.querySelector("main").style.transform = "translateY:-5vw;"
+    document.querySelector("main").style.transform = "translateY:-10vw;"
    }
 else{
     bun.style.display = "none"
