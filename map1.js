@@ -4,6 +4,11 @@ let num3 = Math.floor(100000 + Math.random() * 900000);
 let won_num = Math.floor(100000 + Math.random() * 900000);
 randomnum()
 
+const bun = document.querySelector('.clickR') //ปุ่มที่จะใช้กด
+const bun1 = document.querySelector('.clickL')
+var walkRight = false; //เช็คเดินขวา
+var walkLeft = false; //เช็คเดินซ้าย
+let timer
 
 var front_back = 1;
 var turn = 0;
@@ -54,6 +59,15 @@ const shrine_offset = document.querySelector(".shrine");
 var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 var y = 0;
 var m = 0;
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    bun.style.display = "inline"
+    bun2.style.display = "inline"
+   }
+else{
+    bun.style.display = "none"
+    bun1.style.display = "none"
+}
 
 document.addEventListener('keydown', function (event) {
 
@@ -302,11 +316,7 @@ let app = new Vue({
 /////////////////////////////////////////////////////////////////////////////////////////
 //phonewalk
 
-const bun = document.querySelector('.clickR') //ปุ่มที่จะใช้กด
-const bun1 = document.querySelector('.clickL')
-var walkRight = false; //เช็คเดินขวา
-var walkLeft = false; //เช็คเดินซ้าย
-let timer
+
 
 function timeoutClearRight() {
     clearTimeout(timer);
