@@ -12,7 +12,7 @@
         message: "Please Rotate Your Device",
         subMessage: "",
         allowClickBypass: false,
-        onlyMobile: true,
+        onlyMobile: false,
         zIndex: 1000,
         iconNode: null
     };

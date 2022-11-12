@@ -6,13 +6,18 @@ let timer
 let num1 = Math.floor(100000 + Math.random() * 900000);
 let num2 = Math.floor(100000 + Math.random() * 900000);
 let num3 = Math.floor(100000 + Math.random() * 900000);
+let num4 = Math.floor(100000 + Math.random() * 900000);
 randomnum()
 var check = 0;
 var collision = 0;
 var check_text = 0;
 
 var selected_huay
-
+var event_trigger = 0;
+var front_back = 1;
+var turn = 0;
+var walk = 0;
+var tvv = 0;
 
 function hidehuay(num) {
     document.getElementById("pang_h").style.display = "none"
@@ -31,19 +36,20 @@ function hidehuay(num) {
 
 }
 function hidetv() {
-    document.getElementById("tvh").style.display = "none"
-    check = 0
-    document.querySelector("video").pause();
-    console.log("hide")
-    if (check_text == 0) {
-        timedText()
-        console.log("if")
+    if(tvv == 0){
+        document.getElementById("tvh").style.display = "none"
+        check = 0
+        document.querySelector("video").pause();
+        console.log("hide")
+        tvv +=1;
     }
+    
+    
     if(sessionStorage.hiddenCheck1 && sessionStorage.hiddenCheck2 && sessionStorage.hiddenCheck3){
         document.querySelector(".won_number").innerHTML = selected_huay
     }
     else{
-        document.querySelector(".won_number").innerHTML = "ควย"
+        document.querySelector(".won_number").innerHTML = num4-10+1
     }
     
 }
@@ -63,6 +69,7 @@ const check_end = document.querySelector(".guay");
 const yai_offset = document.querySelector(".yai");
 const women_offset = document.querySelector(".women_map1");
 const shrine_offset = document.querySelector(".shrine");
+const phone_offset = document.querySelector(".phone");
 
 var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 var y = 5;
@@ -84,8 +91,22 @@ document.addEventListener('keydown', function (event) {
     if ((event.keyCode == 68 || event.keyCode == 39) && (window.innerWidth * 0.35) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
         y += 0.8;
         py = y + 'vw';
+        
         character.style.setProperty('--moveset', py);
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha.gif");
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+
         console.log("1");
 
     }
@@ -95,7 +116,20 @@ document.addEventListener('keydown', function (event) {
         py = y + 'vw';
         character.style.setProperty('--moveset', py);
 
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha.gif")
+
+        front_back = Math.abs(front_back)
+        walk += 1
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+        
         console.log("2")
 
     }
@@ -106,12 +140,20 @@ document.addEventListener('keydown', function (event) {
         my = m + 'vw';
         map1m.style.setProperty('--map1move', my)
         character.style.setProperty('--moveset', py);
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha.gif")
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
         console.log("3")
-    }
-
-    if (document.querySelector('.dialog').style.display == "none") {
-
     }
 
 
@@ -119,9 +161,22 @@ document.addEventListener('keydown', function (event) {
     if ((event.keyCode == 65 || event.keyCode == 37) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.35) >= check_end.offsetLeft && check == 0) {
         y -= 0.8;
         py = y + 'vw';
-
         character.style.setProperty('--moveset', py)
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha_flip.gif")
+
+
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        
         console.log("4")
     }
 
@@ -132,7 +187,18 @@ document.addEventListener('keydown', function (event) {
         my = m + 'vw';
         map1m.style.setProperty('--map1move', my)
         character.style.setProperty('--moveset', py);
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha_flip.gif")
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
         console.log("5")
     }
     else if ((event.keyCode == 65 || event.keyCode == 37) && y > 1 && check == 0) {
@@ -141,12 +207,22 @@ document.addEventListener('keydown', function (event) {
         py = y + 'vw';
         character.style.setProperty('--moveset', py);
 
-
-        character_img.setAttribute("src", "./PNG update/Map1/character/main_cha_flip.gif")
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
         console.log("6")
     }
 
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 50) && collision == 0) {
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
@@ -157,7 +233,7 @@ document.addEventListener('keydown', function (event) {
         document.getElementById("tvh").style.display = "inline"
         document.querySelector("video").play();
 
-        setTimeout(hidetv, 11000)
+        setTimeout(hidetv, 4700)
         tv_show = 1
 
     }
@@ -165,7 +241,12 @@ document.addEventListener('keydown', function (event) {
     if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150) {
         document.querySelector(".shrine_talk").style.opacity = 100;
         console.log("sarn")
+    }
 
+    if (phone_offset.offsetLeft - cha_offset.offsetLeft <= 50 && event_trigger == 0) {
+        event_trigger = 1;
+        document.getElementById("c3").style.display = "inline"
+        check = 1 
     }
 
 })
@@ -224,9 +305,19 @@ setTimeout(() => { document.querySelector(".bon1").style.display = "none" }, 300
 
 
 
-function timedText() {
-    var x = document.querySelector(".bon1");
-    check_text = 1;
-      
+
+function next_chat1() {
+    document.getElementById("c3").style.display = "none"
+    document.querySelector(".cat").style.animation = "cat_walk 3s forwards linear"
+    setTimeout(() => { document.getElementById("c4").style.display = "inline" }, 3500);
+    check = 1
 }
 
+function next_chat2() {
+    document.getElementById("c4").style.display = "none"
+    document.getElementById("c5").style.display = "inline"
+    setTimeout(() => { document.getElementById("p1").style.display = "flex" }, 1000);
+    setTimeout(() => { document.getElementById("p1").style.animation = "popup 3s forwards linear" }, 1000);
+    check = 1
+    
+}

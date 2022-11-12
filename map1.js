@@ -213,7 +213,7 @@ document.addEventListener('keydown', function (event) {
     
 
     
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 50) && collision == 0) {
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
@@ -394,7 +394,7 @@ function walkingRight(){
         console.log("3")
     }
     timer = setTimeout(walkingRight,33);
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 50) && collision == 0) {
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
