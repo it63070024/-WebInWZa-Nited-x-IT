@@ -1,10 +1,10 @@
 
         body{
-            background-color: #000000;
+            background-color: #e5e1ce;
             overflow: hidden;
             font-family: myfont;
             font-size:2vw;
-            color: white;
+            color: black;
         }
 
         @font-face {
@@ -19,6 +19,11 @@
 
         img{
             image-rendering: pixelated;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
         }
 
         .floor{
@@ -60,16 +65,52 @@
             width: 100vw;
             top: 18.3vw;
         }
+        .bookshelf{
+            position: absolute;
+            width:4.5%; 
+            top:20vw; left:37.5vw;
+        }
+        .door{
+            position: absolute;
+            width:2%; 
+            top:28.5vw; left:92vw;
+        }
+        .cushion{
+            position: absolute;
+            width:3.5%; 
+            top:32vw; left:37.5vw;
+        }
+        .cat{
+            position: absolute;
+            width:1.2%;
+            top:28.1vw; left:44vw;
+        }
+        .tv{
+            position: absolute;
+            width:8%; 
+            top:23vw; left:45vw;
+        }
+        .desk{
+            position: absolute;
+            width:5%; 
+            top:19vw; left:65vw;
+        }
         .text{
             position: absolute;
-            top:30vw;
-            left:85vw;
+            top:20vw;
+            left:88vw;
         }
+        @keyframes here {
+            0%{transform: translateY(-7%);transition: ease 0.5s;}
+            50%{transform: translateY(7%);transition: ease 0.5s;}
+            100%{transform: translateY(-7%);transition: ease 0.5s;}
+          }
         .text2{
             position: absolute;
             transform: rotate(90deg);
-            top:33vw; 
+            top:23vw; 
             left:90vw;
+            animation: here 1s infinite;
         }
         .left{
             position: absolute;

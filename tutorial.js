@@ -20,7 +20,7 @@ const check_offset = document.getElementById("check");
 document.addEventListener('keydown', function(event) {
     
     if((y>=88)){
-      setTimeout(newmap, 3000);
+      setTimeout(newmap, 1000);
       
     }
 
