@@ -3,6 +3,8 @@ const bun1 = document.querySelector('.clickL')
 var walkRight = false; //เช็คเดินขวา
 var walkLeft = false; //เช็คเดินซ้าย
 let timer
+sessionStorage.accessedMap3 = true;
+
 var y = 18;
 py = y + 'vw';
 var m = 0;

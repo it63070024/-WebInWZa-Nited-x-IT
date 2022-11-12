@@ -6,6 +6,8 @@ const bun1 = document.querySelector('.clickL')
 var walkRight = false; //เช็คเดินขวา
 var walkLeft = false; //เช็คเดินซ้าย
 let timer
+sessionStorage.isMuted = false
+
 const character = document.querySelector(".c1")
 const character_img = document.querySelector(".cha")
 const left = document.querySelector(".left")

@@ -1,6 +1,5 @@
 document.getElementById("menu_con").src= "./PNG update/UI/burger menu/burgerframe.png";
 
-var ismute = false;
 function callMenu() {
     var menu_display_stat = document.getElementById("menu");
     
@@ -86,24 +85,41 @@ function unhoverabt() {
 }
 
 function gotomap2() {
-    location.replace("map2.html")
+    if(sessionStorage.accessedMap2){
+        location.replace("map2.html")
+    }
+    else{
+        alert("You can't go there for now.")
+    }
 }
 
 function gotomap3() {
-    location.replace("map3.html")
+    if(sessionStorage.accessedMap3){
+        location.replace("map3.html")
+    }
+    else{
+        alert("You can't go there for now.")
+    }
 }
 
 function gotomap4() {
-    location.replace("map4.html")
+    if(sessionStorage.accessedMap4){
+        location.replace("map4.html")
+        }
+        else{
+            alert("You can't go there for now.")
+        }
 }
 
 function reset() {
     unhoverrs()
+    sessionStorage.clear()
+    sessionStorage.isMuted = false
     location.replace("map1.html")
 }
 
 function hovermt() {
-    if(ismute == false){
+    if((sessionStorage.isMuted === 'false')){
         document.getElementById("fmt").src = "./PNG update/UI/burger menu/song hold.png"
     }
     else{
@@ -112,7 +128,7 @@ function hovermt() {
 }
 
 function unhovermt() {
-    if (ismute == false){
+    if ((sessionStorage.isMuted === 'false')){
         document.getElementById("fmt").src = "./PNG update/UI/burger menu/song.png"
     }
     else{
@@ -121,19 +137,19 @@ function unhovermt() {
 }
 
 function mute(){
-    if (ismute == true){
-        document.getElementById("fmt").src = "./PNG update/UI/burger menu/song.png"
-        var aud = document.getElementById("soundtrack");
-        aud.muted = false;
-        ismute = false
+    if ((sessionStorage.isMuted === 'false')){ //เช็คว่าตอนนี้เสียงโดน mute อยู่หรือเปล่า
+        // var aud = document.getElementById("soundtrack");
+        // aud.muted = true;
+        sessionStorage.isMuted = true
         unhovermt();
     }
     else{
-        var aud = document.getElementById("soundtrack");
-        aud.muted = true;
-        ismute = true
+        document.getElementById("fmt").src = "./PNG update/UI/burger menu/song.png"
+        // var aud = document.getElementById("soundtrack");
+        // aud.muted = false;
+        sessionStorage.isMuted = false
         unhovermt();
     }
-    console.log(ismute)
+    console.log((sessionStorage.isMuted === 'false'))
 }
 

@@ -6,6 +6,8 @@ let timer
 var y = 0;
 var m = 0;
 var check = 0;
+sessionStorage.accessedMap4 = true;
+
 const character = document.querySelector(".c1")
 const character_img = document.querySelector(".cha")
 const map4m = document.getElementById("map4")
