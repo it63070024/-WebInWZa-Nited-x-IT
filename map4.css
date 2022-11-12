@@ -127,6 +127,20 @@ body>*>*>*>*{
             /* transform: translateY(32.8vw) translateX(5vw); */
         }
 
+        .led_text{
+            position:absolute;
+            width:10%;
+            top:10vw;
+            left:50vw;
+        }
+
+        .led_text.two{
+            left:117vw;
+        }
+
+        .led_text.three{
+            left:190vw;
+        }
 
         .elmo{
             position: absolute;
