@@ -495,6 +495,9 @@ bun1.addEventListener('mousedown', walkingLeft) //ตั้ง eventlisttener �
 bun1.addEventListener('mouseup', timeoutClearRight);
 bun1.addEventListener('mouseleave', timeoutClearRight);
 
+bun.addEventListener('contextmenu', event => event.preventDefault());
+bun1.addEventListener('contextmenu', event => event.preventDefault());
+
 //phonewalk
 /////////////////////////////////////////////////////////////////////////////////////////
 function timedText() {
