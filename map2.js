@@ -246,6 +246,7 @@ let timer
     }
 
     function Popup2() {
+        sessionStorage.hiddenCheck1 = true;
         document.getElementById("pl2").src = "./PNG update/Map2/hdms_JeanHong.svg"
         document.getElementById("p2").style.display = "flex"
         check = 1

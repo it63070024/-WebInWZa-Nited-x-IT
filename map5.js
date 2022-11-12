@@ -39,8 +39,13 @@ function hidetv() {
         timedText()
         console.log("if")
     }
+    if(sessionStorage.hiddenCheck1 && sessionStorage.hiddenCheck2 && sessionStorage.hiddenCheck3){
+        document.querySelector(".won_number").innerHTML = selected_huay
+    }
+    else{
+        document.querySelector(".won_number").innerHTML = "ควย"
+    }
     
-    document.querySelector(".won_number").innerHTML = selected_huay
 }
 
 

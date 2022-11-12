@@ -216,12 +216,14 @@ function hide_chat() {
 }
 
 function hiddenPopup() {
+    sessionStorage.hiddenCheck2 = true;
     document.querySelector(".hidden_img1").src = "./PNG update/Map3/Hidden1.svg"
     document.getElementById("popup1").style.display = "flex"
     check = 1
 }
 
 function hiddenPopup2() {
+    sessionStorage.hiddenCheck3 = true;
     document.querySelector(".hidden_img2").src = "./PNG update/Map3/Hidden2.svg"
     document.getElementById("popup2").style.display = "flex"
     check = 1
