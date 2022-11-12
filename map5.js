@@ -1,3 +1,8 @@
+const bun = document.querySelector('.clickR') //ปุ่มที่จะใช้กด
+const bun1 = document.querySelector('.clickL')
+var walkRight = false; //เช็คเดินขวา
+var walkLeft = false; //เช็คเดินซ้าย
+let timer
 let num1 = Math.floor(100000 + Math.random() * 900000);
 let num2 = Math.floor(100000 + Math.random() * 900000);
 let num3 = Math.floor(100000 + Math.random() * 900000);
@@ -208,3 +213,4 @@ function timedText() {
     setTimeout(() => { x.style.opacity = "0" }, 12000);
     
 }
+

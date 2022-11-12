@@ -143,10 +143,6 @@ document.addEventListener('keydown', function (event) {
         console.log("3")
     }
 
-    if (document.querySelector('.dialog').style.display == "none") {
-
-    }
-
 
     /*A*/
     if ((event.keyCode == 65 || event.keyCode == 37) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.35) >= check_end.offsetLeft && check == 0) {
@@ -502,7 +498,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     bun.style.display = "inline"
-    bun2.style.display = "inline"
+    bun1.style.display = "inline"
    }
 else{
     bun.style.display = "none"
