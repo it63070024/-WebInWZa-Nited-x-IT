@@ -1,7 +1,11 @@
 var y = 6;
 py = y+'%';
 var m = 0;
-
+const bun = document.querySelector('.clickR') //ปุ่มที่จะใช้กด
+const bun1 = document.querySelector('.clickL')
+var walkRight = false; //เช็คเดินขวา
+var walkLeft = false; //เช็คเดินซ้าย
+let timer
 const character = document.querySelector(".c1")
 const character_img = document.querySelector(".cha")
 const left = document.querySelector(".left")
