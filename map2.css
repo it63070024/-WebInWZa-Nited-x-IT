@@ -117,13 +117,18 @@
             top: 22.35vw;
             /* transform: translateY(22.35vw) translateX(29.45vw); */
         }
-
+        @keyframes itemfloat {
+            0%{transform: translateY(-4%);transition: ease 0.5s;}
+            50%{transform: translateY(4%);transition: ease 0.5s;}
+            100%{transform: translateY(-4%);transition: ease 0.5s;}
+          }
         .bamboo{
             position: absolute;
             width: 2.7%;
             left: 85.45vw;
             top: 32vw;
             z-index: 4;
+            animation: itemfloat 3s infinite;
             /* transform: translateY(32vw) translateX(85.45vw);  */
         }
 
