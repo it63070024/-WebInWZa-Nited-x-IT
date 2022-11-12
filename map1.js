@@ -487,13 +487,13 @@ function walkingLeft(){
     timer = setTimeout(walkingLeft,33);
 }
 
-bun.addEventListener('mousedown', walkingRight) //ตั้ง eventlisttener ที่ปุ่มกด
-bun.addEventListener('mouseup', timeoutClearRight);
-bun.addEventListener('mouseleave', timeoutClearRight);
+bun.addEventListener('touchstart', walkingRight) //ตั้ง eventlisttener ที่ปุ่มกด
+bun.addEventListener('touchend', timeoutClearRight);
 
-bun1.addEventListener('mousedown', walkingLeft) //ตั้ง eventlisttener ที่ปุ่มกด
-bun1.addEventListener('mouseup', timeoutClearRight);
-bun1.addEventListener('mouseleave', timeoutClearRight);
+
+bun1.addEventListener('touchstart', walkingLeft) //ตั้ง eventlisttener ที่ปุ่มกด
+bun1.addEventListener('touchend', timeoutClearRight);
+
 
 bun.addEventListener('contextmenu', event => event.preventDefault());
 bun1.addEventListener('contextmenu', event => event.preventDefault());
