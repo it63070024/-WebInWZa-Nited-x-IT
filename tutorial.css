@@ -37,28 +37,28 @@
             height: 2000px;
         }
         .cha{
-            position: absolute;
-            width:5.5%; 
-            --x: 0;
-            --moveset:0;
-            z-index: 10;
-            /*transform: translateY(675%) translateX(var(--x));*/
+            position: relative;
+            width:5.5vw; 
 
-            
         }
         .c1{
-            position: relative;
-            top: 36.4vw;
+            
+            position: absolute; 
+            width:100%;
+            z-index: 10;
             --moveset:0;
+            /*transform: translateY(675%) translateX(var(--x));*/
+            top:36.5vw;
             left:var(--moveset);
-            z-index: 100;
+            
+
         }
         .map1{
             width:300vw; 
             height:auto; 
             position:relative;
-            --map2move:0;
-            left:var(--map2move);
+            --map1move:0;
+            left:var(--map1move);
         }
         .scene{
             position:absolute;
@@ -98,7 +98,7 @@
         .text{
             position: absolute;
             top:20vw;
-            left:88vw;
+            left:89vw;
         }
         @keyframes here {
             0%{transform: translateY(-7%);transition: ease 0.5s;}
@@ -109,7 +109,7 @@
             position: absolute;
             transform: rotate(90deg);
             top:23vw; 
-            left:90vw;
+            left:94.5vw;
             animation: here 1s infinite;
         }
         .left{
@@ -125,6 +125,14 @@
             left: 3vw;
         }
 
+        .check{
+           
+            /* border-style: solid; */
 
+            position: absolute;
+            top: 36.5vw;
+            left: 97vw;
+            z-index: 20;
+        }
 
         
