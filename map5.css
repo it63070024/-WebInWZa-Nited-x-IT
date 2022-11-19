@@ -39,7 +39,7 @@ body>*>*>*>*{
             -ms-user-select: none; /* IE 10 and IE 11 */
             user-select: none; /* Standard syntax */
         }
-        
+
         img{
             image-rendering: pixelated;
             -webkit-user-drag: none;
@@ -171,7 +171,7 @@ body>*>*>*>*{
         .tv2{
             position: absolute;
             width:100%; 
-            
+            cursor: pointer;
             
         }
 
@@ -227,12 +227,12 @@ body>*>*>*>*{
         }
         .huay{
             position: absolute;
-            width:25%; 
+            width:25%;
+            cursor: pointer;
         }
         
 
         .tv_huay{
-    
             padding-top: 1%;
             position: absolute;
             width:50%; 
@@ -319,6 +319,7 @@ body>*>*>*>*{
             background-size: 100% 100%;
             image-rendering: pixelated;
             display: none;
+            cursor: pointer;
         }
 
         .chatbox p{
@@ -336,12 +337,14 @@ body>*>*>*>*{
             transform: scaleX(-1);
             image-rendering: pixelated;
             display: none;
+            cursor: pointer;
         }
 
         .chatbox-left p{
             padding:0.5em .5em 2.5em .5em ;
             z-index:5;
-            transform:scaleX(-1)
+            transform:scaleX(-1);
+            cursor: pointer;
         }
         
         .popup_wrap{
@@ -357,10 +360,12 @@ body>*>*>*>*{
             z-index: 1000000;
             color:white;
             opacity: 0;
+            cursor: pointer;
         }
         .popup_text{
             font-size: 10vw;
             color: white;
+            cursor: pointer;
         }
 .movement{
     animation: move .8s steps(2) infinite;

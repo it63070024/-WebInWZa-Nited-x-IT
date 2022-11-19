@@ -242,7 +242,7 @@ body>*>*>*>*{
             position: absolute;
             width:50%; 
             height: 100%;
-             left:25vw;
+            left:25vw;
             display: none;
             z-index: 12;
         }
