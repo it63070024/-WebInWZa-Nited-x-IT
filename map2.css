@@ -11,6 +11,12 @@
             padding:0px;
         }
 
+        p{
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+
         img{
             image-rendering: pixelated;
             -webkit-user-drag: none;
@@ -317,7 +323,9 @@
             opacity: 100;
             font-size: 2vw;
             text-shadow: 1px 1px rgba(255, 255, 255, 0.563);
-            
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
             
         }
 

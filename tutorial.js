@@ -31,10 +31,15 @@ const cha_offset = document.getElementById("c1");
 const check_offset = document.getElementById("check");
 const check_end = document.querySelector(".door");
 
-
+const cat_offset = document.querySelector(".cat");
+const tv_offset = document.querySelector(".tv");
 
 var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 
+function closePopup() {
+    document.getElementById("p1").style.display = "none"
+    check = 0
+}
 document.addEventListener('keydown', function(event) {
     
     
@@ -190,6 +195,17 @@ document.addEventListener('keydown', function(event) {
 
     ////////////////////////////////////////////////////////////////////////////////////////////
 
+    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 150 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+        document.querySelector(".meow").style.opacity = 100;
+    }
+    else{
+        document.querySelector(".meow").style.opacity = 0;
+    }
+    
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= -150 && tv_offset.offsetLeft - cha_offset.offsetLeft >= -160){
+        document.getElementById("p1").style.display = "flex"
+        check = 1
+    }
     
 })
 

@@ -29,6 +29,12 @@ body>*>*>*>*{
             font-size:2vw;;
         }
 
+        p{
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
+        }
+
         *{
             margin: 0px;
             padding:0px;
@@ -164,17 +170,19 @@ body>*>*>*>*{
             src: url(font/PSLCD3310.ttf);
         }
 
+        .pang1{
+            position: absolute;
+            width:100%; 
+        }
         .chat1{
             position: absolute;
             width:100%; 
-                    
-            
+            cursor: pointer;
         }
         .tv2{
             position: absolute;
             width:100%; 
-            
-            
+            cursor: pointer;
         }
 
         .dialog{
@@ -225,11 +233,11 @@ body>*>*>*>*{
         .huay{
             position: absolute;
             width:25%; 
+            cursor: pointer;
         }
         
 
         .tv_huay{
-    
             padding-top: 1%;
             position: absolute;
             width:50%; 

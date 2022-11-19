@@ -20,6 +20,7 @@
             right: 0vw;
             top: 0vw;
             z-index: 999;
+            cursor: pointer;
 
         }
 
@@ -30,6 +31,7 @@
         }
         .button{
             position: fixed;
+            cursor: pointer;
         }
 
         .button.map2{
