@@ -210,3 +210,4 @@ document.addEventListener('keyup', function(event){
         location.replace("map1.html")
       }
 
+    document.addEventListener('contextmenu', event => event.preventDefault()); //Right Click Disabled

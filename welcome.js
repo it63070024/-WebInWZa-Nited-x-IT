@@ -1,4 +1,4 @@
-
+document.addEventListener('contextmenu', event => event.preventDefault()); //Right Click Disabled
 
 function Open() {
   document.querySelector(".OpenL").style.animation = "OpenL 3s forwards";
