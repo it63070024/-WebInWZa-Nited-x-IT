@@ -301,8 +301,8 @@ body>*>*>*>*{
         }
 
         .check{
-           
-            /* border-style: solid; */
+            opacity: 0;
+            border: 1px solid black;
 
             position: absolute;
             top: 36.5vw;

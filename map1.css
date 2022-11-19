@@ -27,6 +27,7 @@ body>*>*>*>*{
             overflow: hidden;
             font-family: myfont;
             font-size:2vw;;
+            
         }
 
         p{
@@ -299,9 +300,9 @@ body>*>*>*>*{
             display: none;
         }
         .check{
-           
-            /* border-style: solid; */
-
+           opacity: 0;
+            border: 1px solid black;
+            border-style: solid;
             position: absolute;
             top: 36.5vw;
             left: 97vw;
