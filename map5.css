@@ -339,9 +339,8 @@ body>*>*>*>*{
             width: 100vw;
             height: 100vw;
             display: none;
-            position: fixed;
             background-color: rgba(0, 0, 0, 1);
-            align-items: center;
+            align-content: center;
             text-align: center;
             justify-content: center;
             z-index: 1000000;
@@ -349,8 +348,8 @@ body>*>*>*>*{
             opacity: 0;
         }
         .popup_text{
-            position: absolute;
-            top: 18vw;
+            position: relative;
+            top: 16vw;
             font-size: 10vw;
             color: white;
         }
