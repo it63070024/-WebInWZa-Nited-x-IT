@@ -326,6 +326,12 @@ function next_chat2() {
     
 }
 
+function restart() {
+    sessionStorage.clear()
+    sessionStorage.isMuted = false
+    location.replace("map1.html")
+}
+
 /////////////////////////////////////////////////////////////////////////////////////////
 //phonewalk
 
