@@ -1,4 +1,4 @@
-var y = 18;
+var y = 0;
 py = y + 'vw';
 var m = 0;
 
@@ -316,26 +316,16 @@ function walkingRight(){
         console.log("3")
     }
     timer = setTimeout(walkingRight,33);
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
-        document.getElementById("dia").style.display = "inline"
-        check = 1
-        collision = 1
+    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 150 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+        document.querySelector(".meow").style.opacity = 100;
     }
-
-    if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
-        check = 1
-        document.getElementById("tvh").style.display = "inline"
-        document.querySelector("video").play();
-
-        setTimeout(hidetv, 4700)
-        tv_show = 1
-
+    else{
+        document.querySelector(".meow").style.opacity = 0;
     }
-
-    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150) {
-        document.querySelector(".shrine_talk").style.opacity = 100;
-        console.log("sarn")
-
+    
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= -150 && tv_offset.offsetLeft - cha_offset.offsetLeft >= -160){
+        document.getElementById("p1").style.display = "flex"
+        check = 1
     }
 }
 
