@@ -161,8 +161,6 @@ body>*>*>*>*{
         .chat1{
             position: absolute;
             width:100%; 
-                    
-            
         }
         .tv2{
             position: absolute;
@@ -213,9 +211,13 @@ body>*>*>*>*{
             position: absolute;
             width:10%; 
             height: 100%;
-             left:39vw;
+            left:39vw;
             display: none;
             z-index: 11;
+        }
+        .pang{
+            position: absolute;
+            width:100%; 
         }
         .huay{
             position: absolute;
@@ -291,6 +293,7 @@ body>*>*>*>*{
         video::-webkit-media-controls {
             display: none;
         }
+
         .check{
            
             /* border-style: solid; */
@@ -336,9 +339,11 @@ body>*>*>*>*{
         }
         
         .popup_wrap{
-            width: 100vw;
-            height: 100vw;
+            width: 100%;
+            height: 100%;
             display: none;
+            position: fixed;
+            flex-wrap: wrap;
             background-color: rgba(0, 0, 0, 1);
             align-content: center;
             text-align: center;
@@ -348,8 +353,6 @@ body>*>*>*>*{
             opacity: 0;
         }
         .popup_text{
-            position: relative;
-            top: 16vw;
             font-size: 10vw;
             color: white;
         }
