@@ -85,46 +85,10 @@
             width:1.2%;
             top:28.1vw; left:44vw;
         }
-        .meow{
-            position: absolute;
-            top:26vw; left:45.5vw;
-            color: black;
-            opacity: 0;
-            font-size: 1.5vw;
-            text-shadow: 1px 1px rgba(255, 255, 255, 0.563);
-        }
         .tv{
             position: absolute;
             width:8%; 
             top:23vw; left:45vw;
-        }
-        .close_button{
-            position: absolute;
-            top: 1.45vw;
-            right: 37.9vw;
-        }
-        .closebutton_img{
-            width: 3.4vw;
-        }
-        .text_inPopup{
-            color: white;
-            position: absolute;
-            top:40% ;
-        }
-        .popup_wrap{
-            width: 100vw;
-            height: 100vw;
-            display: none;
-            position: fixed;
-            background-color: rgba(0, 0, 0, 0.725);
-            align-items: center;
-            justify-content: center;
-            z-index: 11;
-        }
-        .popup_lottery{
-            width: 28vw;
-            position: absolute;
-            top:0.3vw;
         }
         .desk{
             position: absolute;
