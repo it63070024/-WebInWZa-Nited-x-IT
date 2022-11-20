@@ -10,6 +10,7 @@ var walkRight = false; //เช็คเดินขวา
 var walkLeft = false; //เช็คเดินซ้าย
 let timer
 
+
 var front_back = 1;
 var turn = 0;
 var walk = 0;
@@ -398,6 +399,7 @@ function walkingRight(){
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
+        
     }
     if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
         check = 1
@@ -498,7 +500,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     bun.style.display = "inline"
     bun1.style.display = "inline"
-    document.querySelector("main").style.transform = "translateY:-20vw;"
+    map1m.style.transform = "translateY(-5vw)"
    }
 else{
     bun.style.display = "none"
