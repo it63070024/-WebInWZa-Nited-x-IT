@@ -232,7 +232,7 @@ document.addEventListener('keydown', function (event) {
         collision = 1
     }
 
-    if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
+    if (women_offset.offsetLeft - cha_offset.offsetLeft <= 0 && tv_show == 0) {
         check = 1
         document.getElementById("tvh").style.display = "inline"
         document.querySelector("video").play();
@@ -426,7 +426,7 @@ function walkingRight(){
         collision = 1
     }
 
-    if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
+    if (women_offset.offsetLeft - cha_offset.offsetLeft <= 0 && tv_show == 0) {
         check = 1
         document.getElementById("tvh").style.display = "inline"
         document.querySelector("video").play();
