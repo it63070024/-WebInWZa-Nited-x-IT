@@ -159,6 +159,7 @@
             width: 8%;
             left: 120vw;
             top: 39.9vw;
+            z-index: 11;
             /* transform: translateY(39.9vw) translateX(120vw);  */
         }
 
@@ -176,6 +177,19 @@
             left: 160vw;
             top: 33.7vw;
             /* transform: translateY(33.7vw) translateX(170vw);  */
+        }
+
+        .star{
+            position: absolute;
+            width: .7%;
+            left: 162vw;
+            top: 30vw;
+
+            animation-name: star;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
         }
 
         .lottery{
@@ -377,4 +391,10 @@
         @keyframes fall {
             0%   {top:36.5vw;}
             100% {top: 38vw;}
+          }
+        
+        
+          @keyframes star {
+            0%   {transform: translateY(0vw);}
+            100% {transform: translateY(0.5vw);}
           }

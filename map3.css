@@ -134,6 +134,19 @@
 
         }
 
+        .star{
+            position: absolute;
+            width: .7%;
+            top:32vw;
+            left:41.5vw;
+
+            animation-name: star;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
+        }
+
         .women1{
             position: absolute;
             width: 1.6%;
@@ -173,6 +186,19 @@
             /* transform: translateY(23.3vw) translateX(131vw); */
             top:23.3vw;
             left:131vw;
+        }
+
+        .star2{
+            position: absolute;
+            width: .7%;
+            top:20vw;
+            left: 143vw;
+
+            animation-name: star;
+            animation-duration: .5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            animation-direction: alternate;
         }
 
         .train{
@@ -251,21 +277,8 @@
             100% {top: 40vw;}
           }
         
-        :root{
-            /* --border_val:2px; */
-        }
-        body{
-            border: var(--border_val) solid black;
-        }
-        body>*{
-            border: var(--border_val) solid purple;
-        }
-        body>*>*{
-            border: var(--border_val) solid blue;
-        }
-        body>*>*>*{
-            border: var(--border_val) solid green;
-        }
-        body>*>*>*>*{
-            border: var(--border_val) solid yellow;
-        }
+          @keyframes star {
+            0%   {transform: translateY(0vw);}
+            100% {transform: translateY(0.5vw);}
+          }
+   

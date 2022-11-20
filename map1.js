@@ -213,7 +213,7 @@ document.addEventListener('keydown', function (event) {
     
 
     
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 0) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
@@ -394,12 +394,11 @@ function walkingRight(){
         console.log("3")
     }
     timer = setTimeout(walkingRight,33);
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 0) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
     }
-
     if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
         check = 1
         document.getElementById("tvh").style.display = "inline"
@@ -499,7 +498,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     bun.style.display = "inline"
     bun1.style.display = "inline"
-    document.querySelector("main").style.transform = "translateY:-10vw;"
+    document.querySelector("main").style.transform = "translateY:-20vw;"
    }
 else{
     bun.style.display = "none"

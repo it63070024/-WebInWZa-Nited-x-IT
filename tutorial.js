@@ -13,6 +13,7 @@ var front_back = 1;
 var turn = 0;
 var walk = 0;
 
+var event_trigger = 0;
 
 var check = 0;
 var collision = 0;
@@ -202,9 +203,10 @@ document.addEventListener('keydown', function(event) {
         document.querySelector(".meow").style.opacity = 0;
     }
     
-    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= -150 && tv_offset.offsetLeft - cha_offset.offsetLeft >= -160){
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= -150 && tv_offset.offsetLeft - cha_offset.offsetLeft >= -160 && event_trigger == 0){
         document.getElementById("p1").style.display = "flex"
         check = 1
+        event_trigger = 1;
     }
     
 })
@@ -227,3 +229,201 @@ document.addEventListener('keyup', function(event){
       }
 
     document.addEventListener('contextmenu', event => event.preventDefault()); //Right Click Disabled
+
+    /////////////////////////////////////////////////////////////////////////////////////////
+//phonewalk
+
+
+
+function timeoutClearRight() {
+    clearTimeout(timer);
+    walkRight = false
+    walkLeft = false
+}
+
+function walkingRight(){
+    walkRight = true
+    mid = check_offset.offsetLeft - cha_offset.offsetLeft;
+    if ((cha_offset.offsetLeft >= check_end.offsetLeft)) {
+        check=1;
+        document.getElementById("c1").style.animation = "fall 0.3s forwards";
+        setTimeout(newmap, 500);
+    }
+    /*D*/
+
+
+    ////////////////////////////////////////////////////////////////////////////////////
+    // เดิน
+    if ((walkRight && !walkLeft) && (window.innerWidth * 0.50) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
+        y += 0.8;
+        py = y + 'vw';
+        
+        character.style.setProperty('--moveset', py);
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+
+        console.log("1");
+
+    }
+
+    else if ((walkRight && !walkLeft) && mid > check_offset.offsetLeft / 2 && check == 0) {
+        y += 0.8;
+        py = y + 'vw';
+        character.style.setProperty('--moveset', py);
+
+
+        front_back = Math.abs(front_back)
+        walk += 1
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+        
+        console.log("2")
+
+    }
+    else if ((walkRight && !walkLeft) && mid <= (check_offset.offsetLeft / 2) && check == 0) {
+        y += 0.8;
+        py = y + 'vw';
+        m -= 0.8;
+        my = m + 'vw';
+        map1m.style.setProperty('--map1move', my)
+        character.style.setProperty('--moveset', py);
+
+        walk += 1
+        front_back = Math.abs(front_back)
+        if (turn == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+            turn = 1
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2.PNG")
+        }
+        console.log("3")
+    }
+    timer = setTimeout(walkingRight,33);
+    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 150 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+        document.querySelector(".meow").style.opacity = 100;
+    }
+    else{
+        document.querySelector(".meow").style.opacity = 0;
+    }
+    
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= -150 && tv_offset.offsetLeft - cha_offset.offsetLeft >= -160 && event_trigger == 0){
+        document.getElementById("p1").style.display = "flex"
+        check = 1
+        event_trigger = 1;
+    }
+}
+
+function walkingLeft(){
+    walkLeft = true
+    mid = check_offset.offsetLeft - cha_offset.offsetLeft;
+    if ((walkLeft && !walkRight) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.50) >= check_end.offsetLeft && check == 0) {
+        y -= 0.8;
+        py = y + 'vw';
+        character.style.setProperty('--moveset', py)
+
+
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        
+        console.log("4")
+    }
+
+    else if ((walkLeft && !walkRight) && y >= 0 && m < -1 && check == 0) {
+        y -= 0.8;
+        py = y + 'vw';
+        m += 0.8;
+        my = m + 'vw';
+        map1m.style.setProperty('--map1move', my)
+        character.style.setProperty('--moveset', py);
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        console.log("5")
+    }
+    else if ((walkLeft && !walkRight) && y > 1 && check == 0) {
+
+        y -= 0.8;
+        py = y + 'vw';
+        character.style.setProperty('--moveset', py);
+
+        front_back = -Math.abs(front_back)
+        walk += 1
+        if (turn == 1) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+            turn = 0
+        }
+        if (walk % 10 == 0) {
+            character_img.setAttribute("src", "./PNG update/character/Mc1_flip.PNG")
+        }
+        else if (walk % 10 == 5){
+            character_img.setAttribute("src", "./PNG update/character/Mc2_flip.PNG")
+        }
+        console.log("6")
+    }
+    timer = setTimeout(walkingLeft,33);
+}
+
+bun.addEventListener('touchstart', walkingRight) //ตั้ง eventlisttener ที่ปุ่มกด
+bun.addEventListener('touchend', timeoutClearRight);
+
+
+bun1.addEventListener('touchstart', walkingLeft) //ตั้ง eventlisttener ที่ปุ่มกด
+bun1.addEventListener('touchend', timeoutClearRight);
+
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    bun.style.display = "inline"
+    bun1.style.display = "inline"
+    document.querySelector("main").style.transform = "translateY:-20vw;"
+   }
+else{
+    bun.style.display = "none"
+    bun1.style.display = "none"
+}
+
+//phonewalk
+/////////////////////////////////////////////////////////////////////////////////////////

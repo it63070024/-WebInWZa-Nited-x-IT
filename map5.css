@@ -96,7 +96,8 @@ body>*>*>*>*{
             width:1.4%; 
             z-index: 9;
             top: 36.4vw;
-            left: 39vw;
+            left: 34vw;
+            transform: translateX(5vw);
             
         }
         .ma_ngan{
@@ -116,7 +117,8 @@ body>*>*>*>*{
             position: absolute;
             width:1.4%; 
             
-             top:31.1vw; left:168vw;
+             top:31.1vw; left:164vw;
+             transform: translateX(4vw);
         }
 
         .shrine{

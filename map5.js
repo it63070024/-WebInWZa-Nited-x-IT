@@ -226,7 +226,7 @@ document.addEventListener('keydown', function (event) {
         console.log("6")
     }
 
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 0) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
@@ -242,12 +242,8 @@ document.addEventListener('keydown', function (event) {
 
     }
 
-    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150) {
-        document.querySelector(".shrine_talk").style.opacity = 100;
-        console.log("sarn")
-    }
 
-    if (phone_offset.offsetLeft - cha_offset.offsetLeft <= 50 && event_trigger == 0) {
+    if (phone_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0) {
         event_trigger = 1;
         document.getElementById("c3").style.display = "inline"
         check = 1 
@@ -424,7 +420,7 @@ function walkingRight(){
         console.log("3")
     }
     timer = setTimeout(walkingRight,33);
-    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 90) && collision == 0) {
+    if ((yai_offset.offsetLeft - cha_offset.offsetLeft <= 0) && collision == 0) {
         document.getElementById("dia").style.display = "inline"
         check = 1
         collision = 1
@@ -440,12 +436,7 @@ function walkingRight(){
 
     }
 
-    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150) {
-        document.querySelector(".shrine_talk").style.opacity = 100;
-        console.log("sarn")
-    }
-
-    if (phone_offset.offsetLeft - cha_offset.offsetLeft <= 50 && event_trigger == 0) {
+    if (phone_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0) {
         event_trigger = 1;
         document.getElementById("c3").style.display = "inline"
         check = 1 
@@ -534,7 +525,7 @@ document.addEventListener('contextmenu', event => event.preventDefault());
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     bun.style.display = "inline"
     bun1.style.display = "inline"
-    document.querySelector("main").style.transform = "translateY:-10vw;"
+    document.querySelector("main").style.transform = "translateY:-20vw;"
    }
 else{
     bun.style.display = "none"
