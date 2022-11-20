@@ -112,7 +112,7 @@
             height:auto; 
             position:relative;
             --map2move:0;
-            transform: translateX(var(--map2move));
+            left:var(--map2move);
             
         }
      
