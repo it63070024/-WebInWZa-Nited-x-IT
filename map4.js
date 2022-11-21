@@ -53,7 +53,6 @@ function lottoPopup2() {
 function nextPopup() {
     document.getElementById("pl2").src = pop2
     document.getElementById("nextbutton1").style.display = "none"
-    check = 1
 }
 
 function lottoPopup3() {
@@ -65,7 +64,6 @@ function lottoPopup3() {
 
 function nextPopup2() {
     pop3stat = document.getElementById("pl3").getAttribute("src")
-    check = 1
     if (pop3stat == pop3[1]) {
         document.getElementById("pl3").src = pop3[2]
         document.getElementById("nextbutton2").style.display = "none"
