@@ -139,7 +139,8 @@ body>*>*>*>*{
             position: absolute;
             width:5%; 
             
-             top:36.1vw; left:222.7vw;
+             top:36.1vw; left:224vw;
+             transform: translateX(-1.3vw);
         }
 
         .women_map1{

@@ -80,7 +80,7 @@ document.addEventListener('keydown', function (event) {
 
     ////////////////////////////////////////////////////////////////////////////////////
     // เดิน
-    if ((event.keyCode == 68 || event.keyCode == 39) && (window.innerWidth * 0.35) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
+    if ((event.keyCode == 68 || event.keyCode == 39) && (window.innerWidth * 0.40) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
         y += 0.8;
         py = y + 'vw';
         
@@ -150,7 +150,7 @@ document.addEventListener('keydown', function (event) {
 
 
     /*A*/
-    if ((event.keyCode == 65 || event.keyCode == 37) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.35) >= check_end.offsetLeft && check == 0) {
+    if ((event.keyCode == 65 || event.keyCode == 37) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.40) >= check_end.offsetLeft && check == 0) {
         y -= 0.8;
         py = y + 'vw';
         character.style.setProperty('--moveset', py)
@@ -328,7 +328,7 @@ function walkingRight(){
 
     ////////////////////////////////////////////////////////////////////////////////////
     // เดิน
-    if ((walkRight && !walkLeft) && (window.innerWidth * 0.35) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
+    if ((walkRight && !walkLeft) && (window.innerWidth * 0.40) + (cha_offset.offsetLeft) >= check_end.offsetLeft && cha_offset.offsetLeft <= check_end.offsetLeft && check == 0) {
         y += 0.8;
         py = y + 'vw';
         
@@ -422,7 +422,7 @@ function walkingRight(){
 function walkingLeft(){
     walkLeft = true
     mid = check_offset.offsetLeft - cha_offset.offsetLeft;
-    if ((walkLeft && !walkRight) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.35) >= check_end.offsetLeft && check == 0) {
+    if ((walkLeft && !walkRight) && cha_offset.offsetLeft < check_end.offsetLeft && cha_offset.offsetLeft+(window.innerWidth *0.40) >= check_end.offsetLeft && check == 0) {
         y -= 0.8;
         py = y + 'vw';
         character.style.setProperty('--moveset', py)
