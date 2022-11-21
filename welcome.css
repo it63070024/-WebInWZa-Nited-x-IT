@@ -41,19 +41,7 @@
             height:100%;
         }
        
-        .lottery{
-            position:relative;
-            height:10%;
-            top:35%;
-            left:5%;
-        }
-
-        .lottery2{
-            position:relative;
-            height:10%;
-            top:35%;
-            right: 5%;
-        }
+       
 
         .Open{
             position:fixed;
