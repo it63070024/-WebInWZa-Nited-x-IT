@@ -126,6 +126,7 @@
         }
 
         .foreigner{
+            cursor: pointer;
             position: absolute;
             width: 1.9%;
             /* transform: translateY(34.9vw) translateX(40vw); */
@@ -173,6 +174,7 @@
         }
 
         .jar{
+            cursor: pointer;
             position: absolute;
             width: 9%;
             /* transform: translateY(33.42vw) translateX(70vw); */
@@ -181,6 +183,7 @@
         }
 
         .wanted{
+            cursor: pointer;
             position: absolute;
             width: 8%;
             /* transform: translateY(23.3vw) translateX(131vw); */

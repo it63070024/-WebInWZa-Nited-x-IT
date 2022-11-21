@@ -55,6 +55,7 @@ body>*>*>*>*{
             height: 1000px;
         }
         .close_button{
+            cursor: pointer;
             position: relative;
             top: 0.8vw;
             right: 3.9vw;
@@ -66,6 +67,7 @@ body>*>*>*>*{
             width: 2.5vw;
         }
         .next_button{
+            cursor: pointer;
             position: relative;
             top: 0.8vw;
             right: 6.4vw;
@@ -153,6 +155,7 @@ body>*>*>*>*{
         }
 
         .elmo{
+            cursor: pointer;
             position: absolute;
             width: 1.5%;
             top: 26vw;
@@ -194,6 +197,7 @@ body>*>*>*>*{
         }
 
         .lottery1{
+            cursor: pointer;
             position: absolute;
             top: 28.5vw;
             /* transform: translateY(28.5vw) translateX(36vw); */
@@ -221,6 +225,7 @@ body>*>*>*>*{
         }
 
         .lottery_2{
+            cursor: pointer;
             position: absolute;
             top: 24.6vw;
             left: 117vw;
@@ -237,6 +242,7 @@ body>*>*>*>*{
         }
 
         .lottery_3{
+            cursor: pointer;
             position: absolute;
             width: 3.1%;
             top: 24.6vw;

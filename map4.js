@@ -75,10 +75,6 @@ function nextPopup2() {
     }
 }
 
-function elmoZoom() {
-    document.getElementById("").style.display = "flex"
-}
-
 function newmap() {
     location.replace("map5.html")
 }

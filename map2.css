@@ -129,6 +129,7 @@
             100%{transform: translateY(-4%);transition: ease 0.5s;}
           }
         .bamboo{
+            cursor: pointer;
             position: absolute;
             width: 2.7%;
             left: 85.45vw;
@@ -172,6 +173,7 @@
         }
 
         .chinese_hong{
+            cursor: pointer;            
             position: absolute;
             width: 1.9%;
             left: 160vw;
@@ -193,6 +195,7 @@
         }
 
         .lottery{
+            cursor: pointer;
             position: absolute;
             width: 7%;
             left: 178.5vw;
@@ -275,6 +278,7 @@
             /* transform: translateY(41.5vw) translateX(144.6vw);  */
         }
         .ong{
+            cursor: pointer;
             position: absolute;
             width: 3%;
             left: 229.5vw;

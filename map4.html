@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="map4.css">
     <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="loading.css">
     <link rel="icon" type="image/png" href="./PNG update/Map1/new/IMG_0547_new.png" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>มิตรรักนักสุ่ม</title>
 
 </head>
-<body>
+<body onload="fakeLoad()">
 
     <div style="opacity: 70%; background-size: 100% 100%; background-repeat: no-repeat; image-rendering: pixelated; width: 10vw; height: 10vw; position:fixed;left: 10vw; top:80%; z-index: 100; background-image: url('./PNG update/UI/ARROWRIGHT.png');" class="clickR"></div>
     <div style="opacity: 70%; background-size: 100% 100%; background-repeat: no-repeat; image-rendering: pixelated; width: 10vw; height: 10vw; position:fixed; top:80%; z-index: 100; background-image: url('./PNG update/UI/ARROWLEFT.png');" class="clickL"></div>
-
+    <div class="loading_screen">
+        <img style="height:50%;" src="./PNG update/welcome/IMG_4838.GIF">
+        <p class="text_load" id="load">Loading...</p>
+        <audio loop src="./audio/music/map4_song.mp3" type="audio/mp3" class="soundtrack"></audio>
+    </div>
     <main id="main">
         
         <div class="check" id="check">
@@ -144,6 +149,7 @@
 
 <script src="map4.js"></script>
 <script src="burger.js"></script>
+<script src="loading.js"></script>
     <!--<script>
         let app = new Vue({
             el:'.dialog',
