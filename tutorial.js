@@ -355,6 +355,17 @@ function walkingRight(){
         }
         console.log("3")
     }
+
+    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+        catfx.play()
+        document.querySelector(".cat").style.animation = "jump 0.4s ease-in-out forwards"
+    }
+    
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
+        document.getElementById("p1").style.display = "flex"
+        check = 1
+        event_trigger = 1;
+    }
     timer = setTimeout(walkingRight,33);
 }
 
@@ -425,16 +436,6 @@ function walkingLeft(){
         console.log("6")
     }
     timer = setTimeout(walkingLeft,33);
-    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
-        catfx.play()
-        document.querySelector(".cat").style.animation = "jump 0.4s ease-in-out forwards"
-    }
-    
-    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
-        document.getElementById("p1").style.display = "flex"
-        check = 1
-        event_trigger = 1;
-    }
 }
 
 bun.addEventListener('touchstart', walkingRight) //ตั้ง eventlisttener ที่ปุ่มกด
