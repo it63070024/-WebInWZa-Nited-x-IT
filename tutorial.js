@@ -217,7 +217,7 @@ document.addEventListener('keydown', function(event) {
         document.querySelector(".cat").style.animation = "jump 0.4s ease-in-out forwards"
     }
     
-    else if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
         document.getElementById("p1").style.display = "flex"
         check = 1
         event_trigger = 1;

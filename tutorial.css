@@ -127,13 +127,11 @@
             width:5%; 
             top:16.5vw; left:63vw;
             animation: itemfloat 2.5s infinite;
-            filter: drop-shadow(0 0 1.2px #000);
         }
         .earbud{
             position: absolute;
-            width:5%; 
-            top:17.1vw; left:62vw;
-            filter: drop-shadow(0 0 1px #000);
+            width:1%; 
+            top:23.3vw; left:67.5vw;
         }
         .elmo{
             cursor: pointer;
