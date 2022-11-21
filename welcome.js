@@ -1,9 +1,9 @@
 document.addEventListener('contextmenu', event => event.preventDefault()); //Right Click Disabled
 
 function Open() {
-  document.querySelector(".OpenL").style.animation = "OpenL 3s forwards";
-  document.querySelector(".OpenR").style.animation = "OpenR 3s forwards";
-  setTimeout(newmap,5000);
+  document.querySelectorAll(".Open")[0].style.animation = "OpenL 3s forwards";
+  document.querySelectorAll(".Open")[1].style.animation = "OpenR 3s forwards";
+  // setTimeout(newmap,5000);
 }
 
 

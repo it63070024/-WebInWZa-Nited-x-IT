@@ -1,11 +1,11 @@
 
      @keyframes OpenL {
-        0%   {left:5vw;}
-        100% {left:-30vw;}
+        0%   {transform:translateX(0%);}
+        100% {transform:translateX(-38%);}
       }
       @keyframes OpenR {
-        0%   {left:5vw;}
-        100% {left:40vw;}
+        0%   {transform:translateX(0%);}
+        100% {transform:translateX(38%);}
       }
 
         body{
@@ -27,53 +27,56 @@
 
         img{
             image-rendering: pixelated;
+            -webkit-user-drag: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            
         }
 
         .floor{
             position:absolute;
-            width:71vw;
-            transform: translateX(15vw);
-
+            height:100%;
         }
        
         .lottery{
-            position:absolute;
-            width:10vw;
-            transform: translateY(30vw) translateX(33vw);
-
-        }
-        .OpenL{
-            position:absolute;
-            width:90vw;
-            left: 5vw;
-
-
-        }
-        .OpenR{
-            position:absolute;
-            width:90vw;
-            left: 5vw;
-
+            position:relative;
+            height:10%;
+            top:35%;
+            left:5%;
         }
 
         .lottery2{
-            position:absolute;
-            width:10vw;
-            transform: translateY(30vw) translateX(57vw);
-
+            position:relative;
+            height:10%;
+            top:35%;
+            right: 5%;
         }
+
+        .Open{
+            position:fixed;
+            height:127%;
+            z-index: 2;
+        }
+
+        
         main{
             overflow: hidden;
             width: 100%;
-            height: 1000px;
+            height: 1080px;
         }
 
         .map1{
-            width:300vw; 
-            height:auto; 
-            position:relative;
-            --map2move:0;
-            transform: translateX(var(--map2move));
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            position: fixed;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: center;
+            z-index: 1;
         }
 
        
