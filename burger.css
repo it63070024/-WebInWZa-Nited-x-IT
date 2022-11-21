@@ -5,6 +5,7 @@
             height: 100vw;
             display: none;
             position: fixed;
+            flex-wrap: wrap;
             background-color: rgba(0, 0, 0, 0.725);
             align-items: center;
             justify-content: center;
