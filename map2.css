@@ -357,20 +357,20 @@
         }
         .popup_lottery{
             position: relative;
-            width: 30%;
+            width: 20%;
             z-index: 11;
      
         }
 
         .close_button{
             position: relative;
-            top: 1.2vw;
-            right: 5.5vw;
+            top: 0.6vw;
+            right: 3.7vw;
             width: fit-content;
             z-index: 12;
         }
         .closebutton_img{
-            width: 3.4vw;
+            width: 2.3vw;
         }
 
         :root{
