@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <link rel="stylesheet" href="tutorial.css">
     <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="loading.css">
     <link rel="icon" type="image/png" href="./PNG update/Map1/new/IMG_0547_new.png" />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <title>มิตรรักนักสุ่ม</title>
 
 </head>
-<body>
+<body onload="fakeLoad()">
 
     <div style="opacity: 70%; background-size: 100% 100%; background-repeat: no-repeat; image-rendering: pixelated; width: 10vw; height: 10vw; position:fixed;left: 10vw; top:80%; z-index: 100; background-image: url('./PNG update/UI/ARROWRIGHT.png');" class="clickR"></div>
     <div style="opacity: 70%; background-size: 100% 100%; background-repeat: no-repeat; image-rendering: pixelated; width: 10vw; height: 10vw; position:fixed; top:80%; z-index: 100; background-image: url('./PNG update/UI/ARROWLEFT.png');" class="clickL"></div>
@@ -23,15 +24,25 @@
         <div style="top:-20%;"> 
             <p onclick="closePopup()" class="text_guide">
                 กดคลิกที่
-                <img width="10%" src="./PNG update/UI/burger menu/burgerlogo.png">
+                <img style="width:10%;" src="./PNG update/UI/burger menu/burgerlogo.png">
                 เพื่อเปิดปิดหน้าเมนู
             </p>
-
+            <br>
             <p  onclick="closePopup()" class="text_guide">
-                สังเกตสิ่งของบน map แล้วลองกด บางอย่างจะปรากฏ
+                สังเกตสิ่งของบน map แล้วลองกดบางอย่างจะปรากฏ
             </p>
         </div>
         <p onclick="closePopup()" class="text_inPopup">กดคลิกซ้ายเพื่อไปต่อ</p>
+    </div>
+
+
+    <div onclick="elmoPopup()" class="elmo_wrap">
+        <img style="position:relative; width:35%;" src="./PNG update/Map4/edit/IMG_0542_new.png">
+    </div>
+    
+    <div class="loading_screen">
+        <img style="height:50%;" src="./PNG update/welcome/IMG_4838.GIF">
+        <p style="size:100%;" class="text_inPopup" id="load">Loading...</p>
     </div>
 
     <main>
@@ -56,8 +67,12 @@
         <img src="./PNG update/character/cat.gif" alt="" class="cat">
         <img src="./PNG update/tutorial/tutorial item/modern/smarttv.PNG" class="tv">
         <img src="./PNG update/tutorial/tutorial item/modern/desk_laptop.png" class="desk">
-
-        <p class="meow">Meow~</p>
+        
+        
+        <img src="./PNG update/tutorial/tutorial item/modern/airpod.PNG" class="earbud">
+        <audio src="./audio/sfx/PhoneCall.wav" type="audio/wav" class="phone_sfx"></audio>
+        <img onclick="elmoPopup()" src="./PNG update/Map4/edit/IMG_0542_new.png" class="elmo">
+        <img onclick="phone()" src="./PNG update/tutorial/tutorial item/modern/smartphone.PNG" class="phone">
 
         <p class="text">ลองเดินมานี่่สิ</p>
         <p class="text2">↓</p>
@@ -100,8 +115,9 @@
   
 
 
-<script src="tutorial.js"></script>
-<script src="plzrotate.js"></script>
-<script src="burger.js"></script>
+    <script src="tutorial.js"></script>
+    <script src="plzrotate.js"></script>
+    <script src="burger.js"></script>
+    <script src="loading.js"></script>
 </body>
 </html>

@@ -15,7 +15,7 @@ var walk = 0;
 
 var event_trigger = 0;
 
-var check = 0;
+var check = 1;
 var collision = 0;
 var check_text = 0;
 
@@ -37,10 +37,26 @@ const tv_offset = document.querySelector(".tv");
 
 var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 
+var phonecall = document.querySelector(".phone_sfx")
+phonecall.volume = 0.4;
+function phone() {
+    phonecall.play()
+}
+
 function closePopup() {
     document.getElementById("p1").style.display = "none"
     check = 0
 }
+function elmoPopup() {
+    if(check == 0){
+        check = 1
+        document.querySelector(".elmo_wrap").style.display = "flex"
+    }else{
+        document.querySelector(".elmo_wrap").style.display = "none"
+        check = 0
+    }
+}
+
 document.addEventListener('keydown', function(event) {
     
     
@@ -197,13 +213,10 @@ document.addEventListener('keydown', function(event) {
     ////////////////////////////////////////////////////////////////////////////////////////////
 
     if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
-        document.querySelector(".meow").style.opacity = 100;
-    }
-    else{
-        document.querySelector(".meow").style.opacity = 0;
+        document.querySelector(".cat").style.animation = "jump 0.4s ease-in-out forwards"
     }
     
-    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
+    else if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
         document.getElementById("p1").style.display = "flex"
         check = 1
         event_trigger = 1;
@@ -322,18 +335,6 @@ function walkingRight(){
         console.log("3")
     }
     timer = setTimeout(walkingRight,33);
-    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
-        document.querySelector(".meow").style.opacity = 100;
-    }
-    else{
-        document.querySelector(".meow").style.opacity = 0;
-    }
-    
-    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
-        document.getElementById("p1").style.display = "flex"
-        check = 1
-        event_trigger = 1;
-    }
 }
 
 function walkingLeft(){

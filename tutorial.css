@@ -32,16 +32,27 @@
             -ms-user-select: none;
         }
 
-        .floor{
-            position:absolute;
-            width:100%;
-            transform: translateY(41.5vw);
+        audio::-webkit-media-controls-timeline,
+        video::-webkit-media-controls-timeline {
+            display: none;
         }
+        audio::-webkit-media-controls,
+        video::-webkit-media-controls {
+            display: none;
+        }
+
         main{
             overflow: hidden;
             width: 100%;
             height: 2000px;
         }
+        
+        .floor{
+            position:absolute;
+            width:100%;
+            transform: translateY(41.5vw);
+        }
+
         .cha{
             position: relative;
             width:5.5vw; 
@@ -86,25 +97,57 @@
             width:3.5%; 
             top:32vw; left:37.5vw;
         }
+        @keyframes jump {
+            0%   {top:28.1vw;left:39vw;}
+            100% {top: 36vw;left:35.5vw;}
+          }
         .cat{
             position: absolute;
             width:1.2%;
             top:28.1vw; left:39vw;
             transform: translateX(5vw);
         }
-        .meow{
-            position: absolute;
-            top:26vw; left:45.5vw;
-            color: black;
-            opacity: 0;
-            font-size: 1.5vw;
-            text-shadow: 1px 1px rgba(255, 255, 255, 0.563);
-        }
         .tv{
             position: absolute;
             width:8%; 
             top:23vw; left:52vw;
             transform: translateX(-7vw);
+        }
+        .desk{
+            position: absolute;
+            width:5%; 
+            top:19vw; left:65vw;
+        }
+        .phone{
+            position: absolute;
+            width:5%; 
+            top:16.5vw; left:63vw;
+            animation: itemfloat 2.5s infinite;
+            filter: drop-shadow(0 0 1.2px #000);
+        }
+        .earbud{
+            position: absolute;
+            width:5%; 
+            top:17.1vw; left:62vw;
+            filter: drop-shadow(0 0 1px #000);
+        }
+        .elmo{
+            position: absolute;
+            width:2%; 
+            top:21vw; left:43vw;
+            filter: drop-shadow(0 0 1px #000);
+        }
+        .elmo_wrap{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: fixed;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.85);
+            align-content: center;
+            justify-content: center;
+            z-index: 10001;
         }
         .text_inPopup{
             color: white;
@@ -130,16 +173,17 @@
             justify-content: center;
             z-index: 10001;
         }
-        .desk{
-            position: absolute;
-            width:5%; 
-            top:19vw; left:65vw;
-        }
+    
         .text{
             position: absolute;
             top:20vw;
             left:89vw;
         }
+        @keyframes itemfloat {
+            0%{transform: translateY(-3%);transition: ease 0.5s;}
+            50%{transform: translateY(3%);transition: ease 0.5s;}
+            100%{transform: translateY(-3%);transition: ease ease-out 0.5s;}
+          }
         @keyframes blip{
             0%{opacity: 100%}
             25%{opacity: 0%}
