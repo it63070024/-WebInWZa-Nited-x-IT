@@ -21,12 +21,12 @@ var collision = 0;
 var check_text = 0;
 
 function hidehuay() {
-    document.getElementById("pang_h").style.display = "none"
+    document.querySelector(".pang_pop").style.display = "none"
     check = 0
 }
 
 function hidetv() {
-    document.getElementById("tvh").style.display = "none"
+    document.querySelector(".tv_pop").style.display = "none";
     check = 0
     document.querySelector("video").pause();
     console.log("hide")
@@ -39,6 +39,10 @@ function hidetv() {
     else(
     document.querySelector(".won_number").innerHTML = won_num
     )
+}
+
+function newmap() {
+    location.replace("map2.html")
 }
 
 
@@ -222,7 +226,7 @@ document.addEventListener('keydown', function (event) {
 
     if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
         check = 1
-        document.getElementById("tvh").style.display = "inline"
+        document.querySelector(".tv_pop").style.display = "flex"
         document.querySelector("video").play();
 
         setTimeout(hidetv, 4700)
@@ -252,9 +256,6 @@ document.addEventListener('keyup', function (event) {
 
 })
 
-function newmap() {
-    location.replace("map2.html")
-}
 
 function randomnum() {
 
@@ -295,7 +296,7 @@ let app = new Vue({
 
             else {
                 document.querySelector('.dialog').style.display = "none"
-                document.querySelector(".pang_huay").style.display = "inline"
+                document.querySelector(".pang_pop").style.display = "flex"
 
             }
         }
@@ -403,7 +404,7 @@ function walkingRight(){
     }
     if (women_offset.offsetLeft - cha_offset.offsetLeft <= 35 && tv_show == 0) {
         check = 1
-        document.getElementById("tvh").style.display = "inline"
+        document.querySelector(".tv_pop").style.display = "flex"
         document.querySelector("video").play();
 
         setTimeout(hidetv, 4700)
