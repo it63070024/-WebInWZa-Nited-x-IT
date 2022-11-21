@@ -418,8 +418,8 @@ bun1.addEventListener('touchend', timeoutClearRight);
 document.addEventListener('contextmenu', event => event.preventDefault());
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    bun.style.display = "inline"
-    bun1.style.display = "inline"
+    bun.style.display = "flex"
+    bun1.style.display = "flex"
     map1m.style.transform = "translateY(-5vw)"
    }
 else{
