@@ -111,6 +111,12 @@
             position: absolute;
             top: 90% ;
             cursor: pointer;
+            animation: blip 4.5s infinite;
+        }
+        .text_guide{
+            color: white;
+            position: relative;
+            cursor: pointer;
         }
         .popup_wrap{
             cursor: pointer;
@@ -133,6 +139,13 @@
             position: absolute;
             top:20vw;
             left:89vw;
+        }
+        @keyframes blip{
+            0%{opacity: 100%}
+            25%{opacity: 0%}
+            50%{opacity: 100%}
+            75%{opacity: 0%}
+            100%{opacity: 100%}
         }
         @keyframes here {
             0%{transform: translateY(-7%);transition: ease 0.5s;}
