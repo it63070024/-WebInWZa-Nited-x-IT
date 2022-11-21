@@ -19,6 +19,9 @@ var turn = 0;
 var walk = 0;
 var tvv = 0;
 
+var catfx = document.querySelector(".cat_sfx")
+catfx.volume = 0.7;
+
 function hidehuay(num) {
     document.querySelector(".pang_pop").style.display = "none"
     check = 0
@@ -308,6 +311,7 @@ setTimeout(() => { document.querySelector(".bon1").style.display = "none" }, 300
 
 function next_chat1() {
     document.getElementById("c3").style.display = "none"
+    catfx.play()
     document.querySelector(".cat").style.animation = "cat_walk 3s forwards linear"
     setTimeout(() => { document.getElementById("c4").style.display = "inline" }, 3500);
     check = 1
