@@ -68,8 +68,6 @@
             /*transform: translateY(675%) translateX(var(--x));*/
             top:36.5vw;
             left:var(--moveset);
-            
-
         }
         .map1{
             width:300vw; 
