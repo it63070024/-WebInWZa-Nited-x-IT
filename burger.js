@@ -138,15 +138,15 @@ function unhovermt() {
 
 function mute(){
     if ((sessionStorage.isMuted === 'false')){ //เช็คว่าตอนนี้เสียงโดน mute อยู่หรือเปล่า
-        // var aud = document.getElementById("soundtrack");
-        // aud.muted = true;
+        var aud = document.querySelector(".soundtrack");
+        aud.muted = true;
         sessionStorage.isMuted = true
         unhovermt();
     }
     else{
         document.getElementById("fmt").src = "./PNG update/UI/burger menu/song.png"
-        // var aud = document.getElementById("soundtrack");
-        // aud.muted = false;
+        var aud = document.querySelector(".soundtrack");
+        aud.muted = false;
         sessionStorage.isMuted = false
         unhovermt();
     }

@@ -75,6 +75,16 @@ function nextPopup2() {
     }
 }
 
+function elmoPopup() {
+    if(check == 0){
+        check = 1
+        document.querySelector(".elmo_wrap").style.display = "flex"
+    }else{
+        document.querySelector(".elmo_wrap").style.display = "none"
+        check = 0
+    }
+}
+
 function newmap() {
     location.replace("map5.html")
 }
