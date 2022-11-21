@@ -1,10 +1,13 @@
+var soundtrack = document.querySelector(".soundtrack")
+soundtrack.volume = 0.25;
 function closeLoad(){
     document.querySelector(".loading_screen").style.display = "none"
     check = 0
 }
 function closeLoadScreen(){
     document.querySelector(".loading_screen").style.animation = "transition 2s ease-in-out forwards"
-    setTimeout(closeLoad, 2000)  
+    setTimeout(closeLoad, 2000) 
+    soundtrack.play()
 }
 function addCloseLoad(){
     document.querySelector(".loading_screen").setAttribute('onclick','closeLoadScreen()')

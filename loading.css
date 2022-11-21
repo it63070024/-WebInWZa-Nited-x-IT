@@ -9,6 +9,14 @@
     justify-content: center;
     z-index: 10001;
 }
+.text_load{
+    color: white;
+    position: absolute;
+    font-size: 200%;
+    top: 80% ;
+    cursor: pointer;
+    animation: blip 4.5s infinite;
+}
 
 @keyframes transition{
     0%{opacity: 100;}

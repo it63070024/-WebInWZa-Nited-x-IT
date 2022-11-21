@@ -44,6 +44,7 @@ function phone() {
 }
 
 function closePopup() {
+    
     document.getElementById("p1").style.display = "none"
     check = 0
 }
