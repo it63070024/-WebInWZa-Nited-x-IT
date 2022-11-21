@@ -196,14 +196,14 @@ document.addEventListener('keydown', function(event) {
 
     ////////////////////////////////////////////////////////////////////////////////////////////
 
-    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 150 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
         document.querySelector(".meow").style.opacity = 100;
     }
     else{
         document.querySelector(".meow").style.opacity = 0;
     }
     
-    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= -150 && tv_offset.offsetLeft - cha_offset.offsetLeft >= -160 && event_trigger == 0){
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
         document.getElementById("p1").style.display = "flex"
         check = 1
         event_trigger = 1;
@@ -322,14 +322,14 @@ function walkingRight(){
         console.log("3")
     }
     timer = setTimeout(walkingRight,33);
-    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 150 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
         document.querySelector(".meow").style.opacity = 100;
     }
     else{
         document.querySelector(".meow").style.opacity = 0;
     }
     
-    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= -150 && tv_offset.offsetLeft - cha_offset.offsetLeft >= -160 && event_trigger == 0){
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
         document.getElementById("p1").style.display = "flex"
         check = 1
         event_trigger = 1;
