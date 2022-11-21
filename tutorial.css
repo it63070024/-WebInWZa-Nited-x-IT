@@ -151,6 +151,18 @@
             justify-content: center;
             z-index: 10001;
         }
+        .bsod_wrap{
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
+            display: none;
+            position: fixed;
+            flex-wrap: wrap;
+            background-color: #0078d7;
+            align-content: center;
+            justify-content: center;
+            z-index: 10001;
+        }
         .text_inPopup{
             color: white;
             position: absolute;

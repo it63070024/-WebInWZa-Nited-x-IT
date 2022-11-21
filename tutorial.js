@@ -39,14 +39,24 @@ var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 
 var phonecall = document.querySelector(".phone_sfx")
 phonecall.volume = 0.4;
+var catfx = document.querySelector(".cat_sfx")
+catfx.volume = 0.7;
 function phone() {
     phonecall.play()
 }
 
 function closePopup() {
-    
     document.getElementById("p1").style.display = "none"
     check = 0
+}
+function tvPopup() {
+    if(check == 0){
+        check = 1
+        document.getElementById("p1").style.display = "flex"
+    }else{
+        document.getElementById("p1").style.display = "none"
+        check = 0
+    }
 }
 function elmoPopup() {
     if(check == 0){
@@ -54,6 +64,15 @@ function elmoPopup() {
         document.querySelector(".elmo_wrap").style.display = "flex"
     }else{
         document.querySelector(".elmo_wrap").style.display = "none"
+        check = 0
+    }
+}
+function bsodPopup() {
+    if(check == 0){
+        check = 1
+        document.querySelector(".bsod_wrap").style.display = "flex"
+    }else{
+        document.querySelector(".bsod_wrap").style.display = "none"
         check = 0
     }
 }
@@ -214,6 +233,7 @@ document.addEventListener('keydown', function(event) {
     ////////////////////////////////////////////////////////////////////////////////////////////
 
     if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+        catfx.play()
         document.querySelector(".cat").style.animation = "jump 0.4s ease-in-out forwards"
     }
     
@@ -405,6 +425,16 @@ function walkingLeft(){
         console.log("6")
     }
     timer = setTimeout(walkingLeft,33);
+    if(cat_offset.offsetLeft - cha_offset.offsetLeft <= 0 && cha_offset.offsetLeft - cat_offset.offsetLeft <= 100){
+        catfx.play()
+        document.querySelector(".cat").style.animation = "jump 0.4s ease-in-out forwards"
+    }
+    
+    if(tv_offset.offsetLeft - cha_offset.offsetLeft <= 0 && event_trigger == 0){
+        document.getElementById("p1").style.display = "flex"
+        check = 1
+        event_trigger = 1;
+    }
 }
 
 bun.addEventListener('touchstart', walkingRight) //ตั้ง eventlisttener ที่ปุ่มกด
