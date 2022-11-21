@@ -1,9 +1,10 @@
 document.getElementById("menu_con").src= "./PNG update/UI/burger menu/burgerframe.png";
-
+var menufx = document.getElementById("menufx")
 function callMenu() {
     var menu_display_stat = document.getElementById("menu");
     
     if (menu_display_stat.style.display == "none"){
+        menufx.play();
         unhoverabt();
         unhoverrs();
         unhovermt();
@@ -23,12 +24,14 @@ function callMenu() {
         check = 1
         menu_display_stat.style.display = "flex"
     } else {
+        menufx.play();
         menu_display_stat.style.display = "none"
         check = 0
     }
 }
 
 function about(){
+    menufx.play();
     unhoverabt();
     document.getElementById("menu_con").src = "./PNG update/UI/burger menu/about info.png"
     document.getElementsByClassName("frame")[0].style.display = "none"
@@ -86,6 +89,7 @@ function unhoverabt() {
 
 function gotomap2() {
     if(sessionStorage.accessedMap2){
+        menufx.play();
         location.replace("map2.html")
     }
     else{
@@ -95,6 +99,7 @@ function gotomap2() {
 
 function gotomap3() {
     if(sessionStorage.accessedMap3){
+        menufx.play();
         location.replace("map3.html")
     }
     else{
@@ -104,6 +109,7 @@ function gotomap3() {
 
 function gotomap4() {
     if(sessionStorage.accessedMap4){
+        menufx.play();
         location.replace("map4.html")
         }
         else{
@@ -112,6 +118,7 @@ function gotomap4() {
 }
 
 function reset() {
+    menufx.play();
     unhoverrs()
     sessionStorage.clear()
     sessionStorage.isMuted = false
@@ -137,6 +144,7 @@ function unhovermt() {
 }
 
 function mute(){
+    menufx.play();
     if ((sessionStorage.isMuted === 'false')){ //เช็คว่าตอนนี้เสียงโดน mute อยู่หรือเปล่า
         var aud = document.querySelector(".soundtrack");
         aud.muted = true;
