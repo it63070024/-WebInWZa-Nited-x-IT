@@ -55,36 +55,46 @@ body>*>*>*>*{
             height: 1000px;
         }
         .close_button{
-            position: absolute;
-            top: 1.45vw;
-            right: 37.9vw;
+            position: relative;
+            top: 0.8vw;
+            right: 3.9vw;
+            width: fit-content;
+            height: fit-content;
+            z-index: 12;
         }
         .closebutton_img{
-            width: 3.4vw;
+            width: 2.5vw;
         }
         .next_button{
-            position: absolute;
-            top: 1.45vw;
-            right: 37.9vw;
+            position: relative;
+            top: 0.8vw;
+            right: 6.4vw;
+            width: fit-content;
+            height: fit-content;
+            z-index: 12;
         }
         .nextbutton_img{
-            width: 3.4vw;
+            width: 2.5vw;
+            height: 2.5vw;
         }
 
         .popup_wrap{
-            width: 100vw;
-            height: 100vw;
+            cursor: pointer;
+            width: 100%;
+            height: 100%;
             display: none;
             position: fixed;
-            background-color: rgba(0, 0, 0, 0.725);
-            align-items: center;
+            flex-wrap: wrap;
+            background-color: rgba(0, 0, 0, 0.85);
+            align-content: center;
             justify-content: center;
-            z-index: 11;
+            z-index: 10001;
         }
         .popup_lottery{
-            width: 28vw;
-            position: absolute;
-            top:0.3vw;
+            position: relative;
+            width: 20%;
+            z-index: 11;
+
         }
 
         .cha{
@@ -192,9 +202,15 @@ body>*>*>*>*{
             width: 10vw;
         }
         .popup_lotto{
-            width: 7vw;
+            width: 5vw;
             position: absolute;
-            top: 36vw;
+            top: 3vw;
+        }
+        .pop_lot{
+            position: relative;
+            top: 22vw;
+            right: 12.5vw;
+            z-index: 12;
         }
         .women2{
             position: absolute;

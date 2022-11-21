@@ -228,9 +228,10 @@ body>*>*>*>*{
 
         .pang_huay{
             position: relative;
-            width: 40%;
+            width: 30%;
             z-index: 11;
-            margin-bottom: 11%;
+            margin-bottom: 8%;
+   
    
         }
         .huay{
