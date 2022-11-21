@@ -11,3 +11,6 @@ function newmap() {
   location.replace("tutorial.html");
 }
 
+document.body.addEventListener('contextmenu', (event) => {
+  event.preventDefault();
+});
