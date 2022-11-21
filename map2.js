@@ -24,7 +24,7 @@ sessionStorage.accessedMap2 = true;
             var turn = 0;
             var walk = 0;
 
-            var check = 0
+            var check = 1;
             var event_trigger = 0;
 
             var mid = check_offset.offsetLeft - cha_offset.offsetLeft;

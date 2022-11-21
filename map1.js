@@ -16,7 +16,7 @@ var turn = 0;
 var walk = 0;
 
 
-var check = 0;
+var check = 1;
 var collision = 0;
 var check_text = 0;
 

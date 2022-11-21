@@ -23,7 +23,7 @@ const women_offset = document.querySelector(".women1");
 
 
 var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
-var check = 0
+var check = 1;
 
 var front_back = 1;
 var turn = 0;

@@ -8,7 +8,7 @@ let num2 = Math.floor(100000 + Math.random() * 900000);
 let num3 = Math.floor(100000 + Math.random() * 900000);
 let num4 = Math.floor(100000 + Math.random() * 900000);
 randomnum()
-var check = 0;
+var check = 1;
 var collision = 0;
 var check_text = 0;
 

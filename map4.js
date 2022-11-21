@@ -5,7 +5,7 @@ var walkLeft = false; //เช็คเดินซ้าย
 let timer
 var y = 0;
 var m = 0;
-var check = 0;
+var check = 1;
 sessionStorage.accessedMap4 = true;
 
 const character = document.querySelector(".c1")
