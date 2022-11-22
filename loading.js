@@ -6,7 +6,7 @@ function closeLoad(){
 }
 function closeLoadScreen(){
     document.querySelector(".loading_screen").style.animation = "transition 2s ease-in-out forwards"
-    setTimeout(closeLoad, 2000) 
+    setTimeout(closeLoad, 1750) 
     soundtrack.play()
 }
 function addCloseLoad(){
