@@ -1,11 +1,11 @@
 
      @keyframes OpenL {
         0%   {transform:translateX(0%);}
-        100% {transform:translateX(-38%);}
+        100% {transform:translateX(-39%);}
       }
       @keyframes OpenR {
         0%   {transform:translateX(0%);}
-        100% {transform:translateX(38%);}
+        100% {transform:translateX(39%);}
       }
 
         body{
