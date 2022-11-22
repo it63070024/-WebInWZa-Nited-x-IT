@@ -10,7 +10,7 @@
         onShow: function(){},
         forcePortrait: false,
         message: "Please Rotate Your Device",
-        subMessage: "",
+        subMessage: "Or Stretch Your Browser",
         allowClickBypass: false,
         onlyMobile: false,
         zIndex: 10002,
