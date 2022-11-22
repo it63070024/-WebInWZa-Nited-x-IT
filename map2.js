@@ -468,10 +468,14 @@ bun1.addEventListener('touchend', timeoutClearRight);
 
 document.addEventListener('contextmenu', event => event.preventDefault());
 
-if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-    bun.style.display = "inline"
-    bun1.style.display = "inline"
-    map2m.style.transform = "translateY(-5vw)"
+if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    bun.style.display = "flex"
+    bun1.style.display = "flex"
+    map1m.style.transform = "translateY(-8vw)"
+   }
+else if( /iPad/i.test(navigator.userAgent) ) {
+    bun.style.display = "flex"
+    bun1.style.display = "flex" 
    }
 else{
     bun.style.display = "none"
