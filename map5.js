@@ -54,7 +54,9 @@ function hidetv() {
         setTimeout(() => { document.getElementById("c6").style.display = 'inline' }, 3000);
         setTimeout(() => { document.getElementById("p1").style.display = "flex" }, 8000);
         setTimeout(() => { document.getElementById("p1").style.animation = "popup 2s forwards linear" }, 8000);
-    }
+        setTimeout(setP1func, 1750)
+        document.getElementById("p1").style.cursor = "pointer"
+    }   
     else{//bad end
         document.querySelector(".won_number").innerHTML = num4-10+1
     }
