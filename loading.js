@@ -5,8 +5,8 @@ function closeLoad(){
     check = 0
 }
 function closeLoadScreen(){
-    document.querySelector(".loading_screen").style.animation = "transition 2s ease-in-out forwards"
-    setTimeout(closeLoad, 1750) 
+    document.querySelector(".loading_screen").style.animation = "transition 1s ease-in-out forwards"
+    setTimeout(closeLoad, 850) 
     soundtrack.play()
 }
 function addCloseLoad(){
