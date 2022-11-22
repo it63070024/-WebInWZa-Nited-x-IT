@@ -53,7 +53,7 @@ function hidetv() {
         check = 1;
         setTimeout(() => { document.getElementById("c6").style.display = 'inline' }, 3000);
         setTimeout(() => { document.getElementById("p1").style.display = "flex" }, 8000);
-        setTimeout(() => { document.getElementById("p1").style.animation = "popup 3s forwards linear" }, 8000);
+        setTimeout(() => { document.getElementById("p1").style.animation = "popup 2s forwards linear" }, 8000);
     }
     else{//bad end
         document.querySelector(".won_number").innerHTML = num4-10+1
@@ -306,8 +306,15 @@ setTimeout(() => { document.querySelector(".bon1").style.display = "none" }, 300
 
 
 
+function restart() {
+    sessionStorage.clear()
+    sessionStorage.isMuted = false
+    location.replace("map1.html")
+}
 
-
+function setP1func(){
+    document.getElementById("p1").setAttribute('onclick', 'restart()')
+}
 
 function next_chat1() {
     document.getElementById("c3").style.display = "none"
@@ -321,16 +328,13 @@ function next_chat2() {
     document.getElementById("c4").style.display = "none"
     document.getElementById("c5").style.display = "inline"
     setTimeout(() => { document.getElementById("p1").style.display = "flex" }, 3000);
-    setTimeout(() => { document.getElementById("p1").style.animation = "popup 3s forwards linear" }, 3000);
-    check = 1
-    
+    setTimeout(() => { document.getElementById("p1").style.animation = "popup 2s forwards linear" }, 3000);
+    setTimeout(setP1func, 1750)
+    document.getElementById("p1").style.cursor = "pointer"
+    check = 1 
 }
 
-function restart() {
-    sessionStorage.clear()
-    sessionStorage.isMuted = false
-    location.replace("map1.html")
-}
+
 
 /////////////////////////////////////////////////////////////////////////////////////////
 //phonewalk
