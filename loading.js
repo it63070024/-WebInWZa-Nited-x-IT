@@ -16,7 +16,7 @@ function addCloseLoad(){
 
 }
 function fakeLoad(){
-    setTimeout(addCloseLoad, 3000)
+    setTimeout(addCloseLoad, 1500)
 }
 
 document.body.addEventListener('contextmenu', (event) => {
