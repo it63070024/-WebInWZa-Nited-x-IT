@@ -10,6 +10,7 @@ var walkRight = false; //เช็คเดินขวา
 var walkLeft = false; //เช็คเดินซ้าย
 let timer
 
+var event_trigger = 0;
 
 var front_back = 1;
 var turn = 0;
@@ -19,6 +20,9 @@ var walk = 0;
 var check = 1;
 var collision = 0;
 var check_text = 0;
+
+var catfx = document.querySelector(".cat_sfx")
+catfx.volume = 0.7;
 
 function hidehuay() {
     document.querySelector(".pang_pop").style.display = "none"
@@ -234,10 +238,11 @@ document.addEventListener('keydown', function (event) {
 
     }
 
-    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150) {
+    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150 && event_trigger == 0) {
+        catfx.play()
         document.querySelector(".shrine_talk").style.opacity = 100;
         console.log("sarn")
-
+        event_trigger = 1
     }
 
 })
@@ -412,10 +417,11 @@ function walkingRight(){
 
     }
 
-    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150) {
+    if (shrine_offset.offsetLeft - cha_offset.offsetLeft <= 150 && event_trigger == 0) {
+        catfx.play()
         document.querySelector(".shrine_talk").style.opacity = 100;
         console.log("sarn")
-
+        event_trigger = 1
     }
 }
 
