@@ -20,7 +20,7 @@ var walk = 0;
 var tvv = 0;
 
 var catfx = document.querySelector(".cat_sfx")
-catfx.volume = 0.7;
+catfx.volume = 0.4;
 
 function hidehuay(num) {
     document.querySelector(".pang_pop").style.display = "none"

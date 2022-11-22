@@ -40,7 +40,7 @@ var mid = check_offset.offsetLeft - cha_offset.offsetLeft;
 var phonecall = document.querySelector(".phone_sfx")
 phonecall.volume = 0.4;
 var catfx = document.querySelector(".cat_sfx")
-catfx.volume = 0.7;
+catfx.volume = 0.4;
 function phone() {
     phonecall.play()
 }
